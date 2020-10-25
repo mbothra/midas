@@ -16,7 +16,7 @@ export default class Screens extends Component {
         <Stack.Navigator>
           <Stack.Screen name='Home' component={Home} 
                   options={{
-                    title: 'My home',
+                    title: 'YOU ARE A ?',
                     headerStyle: {
                       backgroundColor: '#f4511e',
                       alignSelf: 'center'
