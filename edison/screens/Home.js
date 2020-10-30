@@ -9,23 +9,28 @@ const { width } = Dimensions.get("screen");
 
 export default class Home extends Component {
 
-    componentDidMount(){
-        console.log(width)
-    }
 
     get_text_home_page = () => {
+        let fontSize
+        if(width< 800){
+            fontSize = width*0.125 
+        }
+        else{
+            fontSize = width*0.07 
+        }
+
         return (        
         <View style={{flex:0.5}}>
             <View style={{flexDirection:'row'}}>
-                <Text style={MidasStyles.midasTextNormal}>Welcome to </Text>
-                <Text style={MidasStyles.midasTextBold}>Midas</Text>
+                <Text style={{fontSize:fontSize, fontFamily:'MidasFont'}}>Welcome to </Text>
+                <Text style={{fontSize:fontSize, fontFamily:'MidasFontBold'}}>Midas</Text>
             </View>
             <View style={{alignItems:'center'}}>
-                <Text style={{fontSize:25, fontFamily:'MidasFontLight'}}>for a seamless learning experience </Text>
+                <Text style={{fontSize:fontSize*0.5, fontFamily:'MidasFont'}}>for a seamless learning experience </Text>
             </View>
             <View style={{flex:0.5}}/>
             <View style={{alignItems:'center'}}>
-                <Text style={{fontFamily:'MidasFont', fontSize:30}}> You are a ? </Text>
+                <Text style={{fontFamily:'MidasFont', fontSize:fontSize*0.6}}> You are a ? </Text>
             </View>
         </View>)
     }
