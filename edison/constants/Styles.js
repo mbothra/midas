@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const MidasStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#00000',
       justifyContent: 'center',
       alignItems:'center'
     },
