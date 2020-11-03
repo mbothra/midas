@@ -9,6 +9,15 @@ const { width } = Dimensions.get("screen");
 
 export default class Home extends Component {
 
+    navigationManager = (role) => {
+        let navigator = this.props.navigation
+        if(role=='Teacher'){
+            navigator.navigate('Topics')
+        }
+        else{
+            alert("Screen not available for the role")
+        }
+    }
 
     getTextHomePage = () => {
         let fontSize
@@ -55,7 +64,7 @@ export default class Home extends Component {
         const imgSize = width*0.21 
         return (
             <View style={{flexDirection:'column', alignItems:'center', marginHorizontal:imgSize*0.1,marginVertical:imgSize*0.1}} key={key_index}>     
-                 <TouchableOpacity style={MidasStyles.button} onPress={()=>{alert("Hi "+role+" !")}}>
+                 <TouchableOpacity style={MidasStyles.button} onPress={()=>{this.navigationManager(role)}}>
                     <Image
                             style={{width: imgSize, height: imgSize}}
                             source={imgSource} 
