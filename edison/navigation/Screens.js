@@ -5,7 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 //Import screens here from ../screens
 import Home from "../screens/Home";
-import Topics from "../screens/Topics";
+import Boards from "../screens/Boards";
 
 const { width } = Dimensions.get("screen");
 
@@ -22,7 +22,7 @@ export default class Screens extends Component {
                     headerShown: false,
                   }}
           />  
-          <Stack.Screen name='Topics' component={Topics} 
+          <Stack.Screen name='Boards' component={Boards} 
                   options={{
                     headerShown: true,
                   }}

@@ -12,7 +12,7 @@ export default class Home extends Component {
     navigationManager = (role) => {
         let navigator = this.props.navigation
         if(role=='Teacher'){
-            navigator.navigate('Topics')
+            navigator.navigate('Boards')
         }
         else{
             alert("Screen not available for the role")

@@ -12,11 +12,13 @@ import 'react-native-gesture-handler';
 // Before rendering any navigation stack
 import { enableScreens } from "react-native-screens";
 import { Images, MidasTheme, Gifs } from "./constants";
+import { Provider } from 'react-redux'; 
+import configStore from './store/config_store';
 
 enableScreens();
 
 const { width, height } = Dimensions.get("screen");
-
+const store = configStore();
 
 const assetImages = [
   Images.Logo,
@@ -91,6 +93,7 @@ export default class App extends Component  {
         logoHeight={1000}
         logoWidth={1111}
       >
+          <Provider store={ store }>
           <NavigationContainer>
             <PaperProvider theme={MidasTheme}>
               <View style={{flex: 1}}>
@@ -98,6 +101,7 @@ export default class App extends Component  {
               </View>
             </PaperProvider>
           </NavigationContainer>
+          </Provider>
           </AnimatedSplash>)
     }
 }
