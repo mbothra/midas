@@ -86,12 +86,10 @@ export default class App extends Component  {
         <AnimatedSplash
         translucent={true}
         isLoaded={this.state.isReady}
-        logoImage={Gifs.Spark}
-        backgroundColor={"#000000"}
+        logoImage={Images.Logo}
+        backgroundColor={"#FFFFFF"}
         disableBackgroundImage={true}
         translucent	={true}
-        logoHeight={1000}
-        logoWidth={1111}
       >
           <Provider store={ store }>
           <NavigationContainer>
