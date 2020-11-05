@@ -13,7 +13,9 @@ class Classes extends Component {
         console.log(this.props)
         this.props.classSetFunction(className)
 
-        // this.props.navigate('Subject')
+        let navigator = this.props.navigation
+        navigator.navigate('Subjects')
+
     }
 
     render() {

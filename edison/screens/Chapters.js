@@ -1,55 +1,46 @@
 import React, { Component } from 'react'
-import { Text } from 'react-native-paper';
-import { Images } from '../constants/';
+import { View } from 'react-native'
+import { connect } from "react-redux";
+import { chapterSet } from '../store/actions/index';
+import {Categories} from '../constants/'
+import {ChapterCard} from '../components/'
 import {MidasStyles} from '../constants/'
-import { Dimensions } from "react-native";
-import {View, Image, TouchableOpacity } from 'react-native'
-import ContentProcessor from '../screens/ContentProcessor'
 
+class Chapters extends Component {
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+    chapterNavigate = (chapterName) => {
+        console.log(chapterName)
+        console.log(this.props)
+        this.props.chapterSetFunction(chapterName)
 
-export default class Chapters extends Component {
+        // let navigator = this.props.navigation
+        // navigator.navigate('Subjects')
 
+    }
 
-
-
-    
-    get_tab_for_class = (className,key_index) => {
+    render() {
+        const cards = Categories.ChapterCategories.map((category, index)=><ChapterCard chapterNameText={category} chapterNameSubText={category} key={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
         return (
-            <View style={{flexDirection:'column', alignItems:'center'}} key={key_index}>     
-                 <TouchableOpacity style={MidasStyles.buttonTile} onPress={()=>{alert("Hi "+className+" !")}}>
-                 <Text style={{fontFamily:'MidasFont', fontSize:30}}> {className}</Text>
-                </TouchableOpacity>
-             </View>
-        )
-
-    }
-
-
-
-    render(){
-        var style = MidasStyles.genericContainerRow
-        if(windowWidth < windowHeight){
-            style = MidasStyles.genericContainerColumn
-        }
-
-        const chapters = ContentProcessor.getChaptersForClassAndSubject(7,'Science')
-
-
-        const ChapterTab = chapters.map((role,index) => this.get_tab_for_class(role,index))
-
-        return(
-        <View>
-            <Text style={{fontFamily:'MidasFont', fontSize:100, alignItems:'center'}}> Chapters (Class 7 : Science)</Text>
-            <View style={style}>
-                {ChapterTab}
+            <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
+                {cards}
             </View>
-            
-        </View>
         )
     }
-
 }
 
+const mapStateToProps = state => {
+    return {
+      className: state.classInfo.className,
+      board: state.boardInfo.board,
+      subjectName: state.subjectInfo.subjectName,
+      chapterName: state.chapterInfo.chapterName
+    };
+  };
+  
+const mapDispatchToProps = dispatch => {
+    return {
+        chapterSetFunction: (chapterName) => dispatch(chapterSet(chapterName))
+    };
+  };
+
+export default connect( mapStateToProps, mapDispatchToProps) (Chapters);
