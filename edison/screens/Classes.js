@@ -10,13 +10,16 @@ import ContentProcessor from '../screens/ContentProcessor'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default class Subjects extends Component {
+export default class Classes extends Component {
+
+
     
-    get_tab_for_subject = (subjectName,key_index) => {
+    get_tab_for_class = (classNumber,key_index) => {
+        const className = 'Class' + classNumber
         return (
             <View style={{flexDirection:'column', alignItems:'center'}} key={key_index}>     
-                 <TouchableOpacity style={MidasStyles.buttonTile} onPress={()=>{alert("Hi, let's study "+subjectName+" !")}}>
-                 <Text style={{fontFamily:'MidasFont', fontSize:30}}> {subjectName}</Text>
+                 <TouchableOpacity style={MidasStyles.buttonTile} onPress={()=>{alert("Hi "+className+" !")}}>
+                 <Text style={{fontFamily:'MidasFont', fontSize:30}}> {className}</Text>
                 </TouchableOpacity>
              </View>
         )
@@ -26,21 +29,20 @@ export default class Subjects extends Component {
 
 
     render(){
+        console.log(windowHeight,windowWidth);
         var style = MidasStyles.genericContainerRow
         if(windowWidth < windowHeight){
             style = MidasStyles.genericContainerColumn
         }
 
-        const subjects = ContentProcessor.getSubjectsForClass(7)
-
-
-        const SubjectsTab = subjects.map((subjectName,index) => this.get_tab_for_subject(subjectName,index))
+        const classes = ContentProcessor.getAllClasses();
+        const classTabs = classes.map((classNumber,index) => this.get_tab_for_class(classNumber,index))
 
         return(
         <View>
-            <Text style={{fontFamily:'MidasFont', fontSize:100, alignItems:'center'}}> Subjects (Class 7)</Text>
+            <Text style={{fontFamily:'MidasFont', fontSize:100, alignItems:'center'}}> Classes </Text>
             <View style={style}>
-                {SubjectsTab}
+                {classTabs}
             </View>
             
         </View>
