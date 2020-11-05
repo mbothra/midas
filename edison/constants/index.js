@@ -8,6 +8,6 @@ export {
   MidasTheme,
   Images,
   MidasStyles,
-  xml_data
+  xml_data,
   Gifs
 };

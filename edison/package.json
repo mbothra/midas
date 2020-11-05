@@ -30,8 +30,8 @@
     "react-native-web": "~0.13.12",
     "react-redux": "^7.2.2",
     "react-timer-mixin": "^0.13.4",
-    "typescript": "^4.0.5",
     "redux": "^4.0.5",
+    "typescript": "^4.0.5",
     "use-expo": "^3.0.0"
   },
   "devDependencies": {

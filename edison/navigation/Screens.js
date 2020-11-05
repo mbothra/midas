@@ -22,7 +22,7 @@ export default class Screens extends Component {
         // <Stack.Navigator initialRouteName='Home'>
         //   <Stack.Screen name='Home' component={Home} 
         <Stack.Navigator initialRouteName='Classes'>
-        <Stack.Screen name='Classes' component={Subjects} 
+        <Stack.Screen name='Classes' component={Home} 
                   options={{
                     headerShown: false,
                   }}
