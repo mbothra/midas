@@ -5,6 +5,7 @@ import { chapterSet } from '../store/actions/index';
 import {Categories} from '../constants/'
 import {ChapterCard} from '../components/'
 import {MidasStyles} from '../constants/'
+import ContentProcessor from './ContentProcessor';
 
 class Chapters extends Component {
 
@@ -19,7 +20,12 @@ class Chapters extends Component {
     }
 
     render() {
-        const cards = Categories.ChapterCategories.map((category, index)=><ChapterCard chapterNameText={category} chapterNameSubText={category} key={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
+        const board = this.props.board;
+        let classNum = this.props.className;
+        classNum = classNum.replace('Class ','');
+        const subject = this.props.subjectName;
+        const chapters = ContentProcessor.getAllChapters(board,classNum,subject);
+        const cards = chapters.map((category, index)=><ChapterCard chapterNameText={category} chapterNameSubText={ContentProcessor.getDesciptionForChapter(board,category,classNum,subject)} key={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
         return (
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}

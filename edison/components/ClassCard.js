@@ -24,7 +24,7 @@ class ClassCard extends Component {
             <View style={{width:cardWidth}}>
                 <TouchableOpacity >
                     <Card elevation={8} style={MidasStyles.cardContainer} onPress={this.props.classNavigate}>
-                        <Card.Title title={classNameText} subtitle={classNameSubText} left={LeftContent}/>
+                        <Card.Title title={'Class '+ classNameText} subtitle={classNameSubText} left={LeftContent}/>
                     </Card>    
                 </TouchableOpacity>       
              </View>

@@ -1,5 +1,5 @@
 import { parse } from 'fast-xml-parser';
-import {MidasStyles,xml_data} from '../constants/'
+import {MidasStyles,xml_data} from '../constants/';
 
 class ContentProcessor{
     // static getXMLResponse = () => {
@@ -23,25 +23,17 @@ class ContentProcessor{
         return Array.from(mySet);     
     }
 
-    static getSubjectsForClass(classNumber){
-        let mySet = new Set();
-        let jsonArray = parse(xml_data);
-        let records = jsonArray.content.record;
-        let filteredRecords = records.filter(d => d.Class == classNumber)
-        filteredRecords.map((item) => mySet.add(item['Subject']))
-        return Array.from(mySet);     
-    }
 
-    static getChaptersForClassAndSubject(classNumber,subject){
+    static getAllChapters(board,classNum,subject){
         let mySet = new Set();
         let jsonArray = parse(xml_data);
         let records = jsonArray.content.record;
-        let filteredRecords = records.filter(d => d.Class == classNumber && d.Subject === subject)
+        let filteredRecords = records.filter(d => d.Board === board && d.Class == classNum && d.Subject === subject)
         filteredRecords.map((item) => mySet.add(item['Chapter']))
         return Array.from(mySet);
     }
 
-    static getDesciptionForChapter(chapter,classNumber,subject){
+    static getDesciptionForChapter(board,chapter,classNumber,subject){
         let mySet = new Set();
         let jsonArray = parse(xml_data);
         let records = jsonArray.content.record;
@@ -50,10 +42,43 @@ class ContentProcessor{
         return Array.from(mySet);
     }
 
-    static getAllClasses(){
+    static getClassesForBoard(board){
+        let mySet = new Set();
         let contentJson = parse(xml_data);
-        let classes = this.getUniqueTagValues('Class',contentJson)
-        return classes;
+        let records = contentJson.content.record;
+        let filteredRecords = records.filter(d => d.Board === board)
+        filteredRecords.map((item) => mySet.add(item['Class']));
+        
+        return Array.from(mySet);
+    }
+
+    static getClassCategory(board,classNum){
+        let mySet = new Set();
+        let contentJson = parse(xml_data);
+        let records = contentJson.content.record;
+        let filteredRecords = records.filter(d => d.Board === board && d.Class== classNum)
+        filteredRecords.map((item) => mySet.add(item['ClassCategory']));
+        
+        return Array.from(mySet);
+    }
+
+    static getAllBoards(){
+        let contentJson = parse(xml_data);
+        let boards = this.getUniqueTagValues('Board',contentJson)
+        return boards;
+    }
+
+    static getAllSubjects(board,classNum){
+        let mySet = new Set();
+        let jsonArray = parse(xml_data);
+        let records = jsonArray.content.record;
+        let filteredRecords = records.filter(d => d.Class == classNum && d.Board === board)
+        filteredRecords.map((item) => mySet.add(item['Subject']))
+        return Array.from(mySet);  
+    }
+
+    static getSubjectDescription(board,classNum,subject){
+        return subject;
     }
 
     

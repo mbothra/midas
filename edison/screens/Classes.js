@@ -5,13 +5,14 @@ import { classSet } from '../store/actions/index';
 import {Categories} from '../constants/'
 import {ClassCard} from '../components/'
 import {MidasStyles} from '../constants/'
+import ContentProcessor from '../screens/ContentProcessor';
 
 class Classes extends Component {
 
     classNavigate = (className) => {
         console.log(className)
         console.log(this.props)
-        this.props.classSetFunction(className)
+        this.props.classSetFunction("Class "+className)
 
         let navigator = this.props.navigation
         navigator.navigate('Subjects')
@@ -20,7 +21,8 @@ class Classes extends Component {
 
     render() {
         const {board} = this.props
-        const cards = Categories.ClassCategories.map((category, index)=><ClassCard classNameText={category} classNameSubText={category} key={index} classNavigate={() => {this.classNavigate(category)}}/>)
+        const classes = ContentProcessor.getClassesForBoard(board)
+        const cards = classes.map((category, index)=><ClassCard classNameText={category} classNameSubText={ContentProcessor.getClassCategory(board,category)} key={index} classNavigate={() => {this.classNavigate(category)}}/>)
         return (
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}

@@ -5,6 +5,7 @@ import { boardSet } from '../store/actions/index';
 import {Categories} from '../constants/'
 import {BoardCard} from '../components/'
 import {MidasStyles} from '../constants/'
+import ContentProcessor from '../screens/ContentProcessor';
 
 class Boards extends Component {
 
@@ -15,7 +16,8 @@ class Boards extends Component {
     }
 
     render() {
-        const cards = Categories.BoardCategories.map((category, index)=><BoardCard boardText={category} boardSubText={category} key={index} boardNavigate={() => {this.boardNavigate(category)}}/>)
+        const boards = ContentProcessor.getAllBoards();
+        const cards = boards.map((category, index)=><BoardCard boardText={category} boardSubText={category} key={index} boardNavigate={() => {this.boardNavigate(category)}}/>)
         return (
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}
