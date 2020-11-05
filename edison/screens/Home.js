@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Text } from 'react-native-paper';
 import { Images } from '../constants/';
 import {MidasStyles} from '../constants/'
-import { Dimensions } from "react-native";
 import {View, Image, TouchableOpacity } from 'react-native'
+import { Dimensions } from "react-native";
 
 const { width } = Dimensions.get("screen");
 
@@ -11,6 +11,7 @@ export default class Home extends Component {
 
     navigationManager = (role) => {
         let navigator = this.props.navigation
+        console.log(this.props)
         if(role=='Teacher'){
             navigator.navigate('Boards')
         }

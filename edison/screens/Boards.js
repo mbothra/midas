@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import { connect } from "react-redux";
 import { boardSet } from '../store/actions/index';
+import {Categories} from '../constants/'
+import {BoardCard} from '../components/'
+import {MidasStyles} from '../constants/'
 
 class Boards extends Component {
 
-    componentDidMount(){
-        this.props.boardSetFunction('MBSE')
+    boardNavigate = (boardText) =>{
+        let navigator = this.props.navigation
+        this.props.boardSetFunction(boardText)
+        navigator.navigate('Classes')
     }
 
     render() {
+        const cards = Categories.BoardCategories.map((category, index)=><BoardCard boardText={category} boardSubText={category} key={index} boardNavigate={() => {this.boardNavigate(category)}}/>)
         return (
-            <View>
-                <Text> textInComponent </Text>
+            <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
+                {cards}
             </View>
         )
     }

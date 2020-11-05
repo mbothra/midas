@@ -60,6 +60,16 @@ const MidasStyles = StyleSheet.create({
     midasTextLight: {
         fontSize:25,
         fontFamily:'MidasFontLight'
+    },
+    cardContainer: {
+        marginLeft:10,
+        marginRight: 10,
+        marginTop:10,
+        marginBottom:10,
+        width:'auto',
+        backgroundColor:'#c4c4c4',
+        borderRadius:10,
+        fontFamily:'MidasFont'
     }
   });
 

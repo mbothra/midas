@@ -6,8 +6,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 //Import screens here from ../screens
 import Home from "../screens/Home";
 import Classes from "../screens/Classes"
-import Chapters from "../screens/Chapters";
-import Subjects from "../screens/Subjects";
 import Boards from "../screens/Boards";
 
 const { width } = Dimensions.get("screen");
@@ -19,10 +17,8 @@ export default class Screens extends Component {
   
   render() {
     return (
-        // <Stack.Navigator initialRouteName='Home'>
-        //   <Stack.Screen name='Home' component={Home} 
-        <Stack.Navigator initialRouteName='Classes'>
-        <Stack.Screen name='Classes' component={Home} 
+        <Stack.Navigator initialRouteName='Home' animationEnabled={true}>
+          <Stack.Screen name='Home' component={Home} 
                   options={{
                     headerShown: false,
                   }}
@@ -31,6 +27,11 @@ export default class Screens extends Component {
                   options={{
                     headerShown: true,
                   }}
+          />  
+          <Stack.Screen name='Classes' component={Classes} 
+            options={{
+              headerShown: true,
+            }}
           />  
         </Stack.Navigator>
     )
