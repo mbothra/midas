@@ -18,7 +18,7 @@ class BoardCard extends Component {
             cardWidth = width/2
         }
         else {
-            cardWidth = width/10
+            cardWidth = width/2
         }
         return (
             <View style={{width:cardWidth}}>

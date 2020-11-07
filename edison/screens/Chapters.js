@@ -6,6 +6,7 @@ import {Categories} from '../constants/'
 import {ChapterCard} from '../components/'
 import {MidasStyles} from '../constants/'
 import ContentProcessor from './ContentProcessor';
+import { ScrollView } from 'react-native-gesture-handler';
 
 class Chapters extends Component {
 

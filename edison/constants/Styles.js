@@ -6,7 +6,7 @@ const height_proportion = '10%';
 const MidasStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#00000',
+      backgroundColor: '#eaeaea',
       justifyContent: 'center',
       alignItems:'center'
     },
@@ -19,9 +19,9 @@ const MidasStyles = StyleSheet.create({
       flexDirection:'row',
       justifyContent: 'space-evenly',
       padding:100,
-      alignItems:'strech',
+      alignItems:'stretch',
       flexWrap:'wrap',
-      alignContent: 'centre',
+      alignContent: 'center',
     },
     genericContainerColumn: {
       flexDirection:'column',
@@ -30,7 +30,7 @@ const MidasStyles = StyleSheet.create({
       padding:10,
     },
     button: {
-      backgroundColor: '#859a9b',
+      backgroundColor: '#eaeaea',
       borderRadius: 200,
       padding: 10,
       marginBottom: 20,
@@ -40,7 +40,7 @@ const MidasStyles = StyleSheet.create({
       shadowOpacity: 0.35,
     },
     buttonTile: {
-      backgroundColor: '#859a9b',
+      backgroundColor: '#61dafb',
       padding: 50,
       marginBottom: 20,
       shadowColor: '#303838',
@@ -67,7 +67,7 @@ const MidasStyles = StyleSheet.create({
         marginTop:10,
         marginBottom:10,
         width:'auto',
-        backgroundColor:'#c4c4c4',
+        backgroundColor:'#61dafb',
         borderRadius:10,
         fontFamily:'MidasFont'
     }

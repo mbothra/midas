@@ -18,7 +18,7 @@ export default class ChapterCard extends Component {
             cardWidth = width/2
         }
         else {
-            cardWidth = width/10
+            cardWidth = width
         }
         return (
             <View style={{width:cardWidth}}>
