@@ -9,6 +9,7 @@ import Classes from "../screens/Classes"
 import Boards from "../screens/Boards";
 import Subjects from "../screens/Subjects";
 import Chapters from "../screens/Chapters";
+import ContentScreen from "../screens/content_screens/components/ContentScreen";
 
 const { width } = Dimensions.get("screen");
 
@@ -41,6 +42,11 @@ export default class Screens extends Component {
             }}
           />  
           <Stack.Screen name='Chapters' component={Chapters} 
+            options={{
+              headerShown: true,
+            }}
+          />
+          <Stack.Screen name='ContentScreen' component={ContentScreen} 
             options={{
               headerShown: true,
             }}

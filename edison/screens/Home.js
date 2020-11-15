@@ -31,7 +31,7 @@ export default class Home extends Component {
         }
 
         return (        
-        <View style={{flex:0.5}}>
+        <View style={{flex:0.75}}>
             <View style={{flexDirection:'row'}}>
                 <Text style={{fontSize:fontSize, fontFamily:'MidasFont'}}>Welcome to </Text>
                 <Text style={{fontSize:fontSize, fontFamily:'MidasFontBold'}}>Midas</Text>

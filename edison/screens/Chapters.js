@@ -15,8 +15,8 @@ class Chapters extends Component {
         console.log(this.props)
         this.props.chapterSetFunction(chapterName)
 
-        // let navigator = this.props.navigation
-        // navigator.navigate('Subjects')
+        let navigator = this.props.navigation
+        navigator.navigate('ContentScreen')
 
     }
 
