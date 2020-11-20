@@ -4,16 +4,19 @@ import { Images } from '../constants/';
 import {MidasStyles} from '../constants/'
 import {View, Image, TouchableOpacity } from 'react-native'
 import { Dimensions } from "react-native";
+import { connect } from "react-redux";
+import { roleSet } from '../store/actions/index';
 
 const { width } = Dimensions.get("screen");
 
-export default class Home extends Component {
+class Home extends Component {
 
     navigationManager = (role) => {
         let navigator = this.props.navigation
         console.log(this.props)
+        this.props.roleSetFunction(role)
         if(role=='Teacher'){
-            navigator.navigate('Boards')
+            navigator.navigate('LoginScreen')
         }
         else{
             alert("Screen not available for the role")
@@ -90,3 +93,17 @@ export default class Home extends Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+      role: state.boardInfo.role
+    };
+  };
+  
+const mapDispatchToProps = dispatch => {
+    return {
+        roleSetFunction: (role) => dispatch(roleSet(role))
+    };
+  };
+
+export default connect( mapStateToProps, mapDispatchToProps) (Home);

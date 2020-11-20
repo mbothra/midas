@@ -12,7 +12,7 @@ export default class ChapterCard extends Component {
 
     render() {
         const {chapterNameText, chapterNameSubText} = this.props
-        const LeftContent = props => <Avatar.Icon {...props} icon="plus" />
+        const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
         let cardWidth
         if(width > 400){
             cardWidth = width/2

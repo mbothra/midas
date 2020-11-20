@@ -1,8 +1,9 @@
 
-import { BOARD_SET } from "../actions/action_types";
+import { BOARD_SET, ROLE_SET } from "../actions/action_types";
 
 const initialState = {
-  board: 'Maharshtra Board'
+  board: 'Maharshtra Board',
+  role: 'null'
 };
 
 const boardReducer = (state = initialState, action) => {
@@ -12,10 +13,15 @@ const boardReducer = (state = initialState, action) => {
         ...state,
         board: action.board
       };
-
+    case ROLE_SET:
+      return {
+        ...state,
+        role: action.role
+      };
     default:
       return state;
   }
 };
+
 
 export default boardReducer;
