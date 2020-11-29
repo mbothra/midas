@@ -3,9 +3,12 @@ import { View, StyleSheet, Dimensions, StatusBar } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
 import { connect } from "react-redux";
 import { contentSet } from '../../../store/actions/index';
+import {VideoTab} from '../tabs/VideoTab';
 
 const FirstRoute = () => (
-  <View style={[styles.scene, { backgroundColor: '#ff4081' }]} />
+  <View style={{flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
+  {VideoTab}
+</View>
 );
 
 const SecondRoute = () => (
