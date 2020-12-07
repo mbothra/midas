@@ -1,9 +1,10 @@
 
-import { CONTENT_SET } from "../actions/action_types";
+import { CONTENT_SET, VIDEO_SET } from "../actions/action_types";
 
 const initialState = {
   contentIndex: 0,  
-  contentType: 'Videos'
+  contentType: 'Videos',
+  videoIndex: null
 };
 
 const contentReducer = (state = initialState, action) => {
@@ -14,7 +15,11 @@ const contentReducer = (state = initialState, action) => {
         contentType: action.contentTypeNew,
         contentIndex: action.contentIndexNew
       };
-
+    case VIDEO_SET:
+        return {
+          ...state,
+          videoIndex: action.videoIndex,
+        };
     default:
       return state;
   }

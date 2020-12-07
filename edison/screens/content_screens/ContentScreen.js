@@ -2,14 +2,9 @@ import React, { Component } from 'react'
 import { View, StyleSheet, Dimensions, StatusBar } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
 import { connect } from "react-redux";
-import { contentSet } from '../../../store/actions/index';
-import {VideoTab} from '../tabs/VideoTab';
+import { contentSet } from '../../store/actions/index';
+import {VideoTab} from './tabs';
 
-const FirstRoute = () => (
-  <View style={{flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
-  {VideoTab}
-</View>
-);
 
 const SecondRoute = () => (
   <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
@@ -18,7 +13,13 @@ const SecondRoute = () => (
 const initialLayout = { width: Dimensions.get('window').width };
 
 class ContentScreen extends Component {
-
+  VideoRoute = () => {
+    return (
+      <View style={{flex:1}}>
+          <VideoTab navigation={this.props.navigation}/>
+      </View>
+    )
+  }
 
     handleIndexChange = newIndex => {
         const contentTypeMap = new Map();
@@ -38,11 +39,12 @@ class ContentScreen extends Component {
         { key: 'assignments', title: 'Assignments' },
         { key: 'quizzes', title: 'Quizzes' }
       ];
- 
+  let  me = this
+  const VideoRoute = () => (this.VideoRoute())
    const renderScene = SceneMap({
-    videos: FirstRoute,
+    videos: VideoRoute,
     readings: SecondRoute,
-    assignments: FirstRoute,
+    assignments: SecondRoute,
     quizzes: SecondRoute,
    });
 

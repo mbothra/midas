@@ -29,7 +29,7 @@ class Subjects extends Component {
         let classNum = this.props.className;
         classNum = classNum.replace('Class ','');
         const subjects = ContentProcessor.getAllSubjects(board,classNum);
-        const cards = subjects.map((category, index)=><SubjectCard subjectNameText={category} subjectNameSubText={ContentProcessor.getSubjectDescription(board,classNum,category)} key={index} subjectNavigate={() => {this.subjectNavigate(category)}}/>)
+        const cards = subjects.map((category, index)=><SubjectCard subjectNameText={category} subjectNameSubText={ContentProcessor.getSubjectDescription(board,classNum,category)} key={index} id={index} subjectNavigate={() => {this.subjectNavigate(category)}}/>)
         return (
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}

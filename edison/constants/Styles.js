@@ -1,7 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { Dimensions } from "react-native";
 
 const width_proportion = '10%';
 const height_proportion = '10%';
+const { width } = Dimensions.get("screen");
+
 
 const MidasStyles = StyleSheet.create({
     container: {
@@ -68,10 +71,31 @@ const MidasStyles = StyleSheet.create({
         marginTop:10,
         marginBottom:10,
         width:'auto',
-        backgroundColor:'#61dafb',
+        backgroundColor:'white',
         borderRadius:10,
-        fontFamily:'MidasFont'
+        fontFamily:'MidasFont',
+        borderRadius:40,
     },
+    chapterCardContainer: {
+      marginLeft:5,
+      marginRight: 5,
+      marginTop:5,
+      marginBottom:5,
+      width:'auto',
+      backgroundColor:'white',
+      fontFamily:'MidasFont',
+  },
+    subjectCardContainer: {
+      marginLeft:10,
+      marginRight: 10,
+      marginTop:10,
+      marginBottom:10,
+      width:'auto',
+      backgroundColor:'white',
+      borderRadius:10,
+      fontFamily:'MidasFont',
+      borderRadius:40,
+  },
     inputView:{
       width:"80%",
       // backgroundColor:"#ffffff",
@@ -120,9 +144,30 @@ const MidasStyles = StyleSheet.create({
     loginText: {
       fontFamily:'MidasFontBold',
       color:'white',
-      fontSize:'20px'
+      fontSize:20
+    },
+    modalTitleText: {
+      fontFamily:'MidasFontBold',
+      color:'white',
+      fontSize:width<700?width/17:width/28
+    },
+    modalText: {
+      fontFamily:'MidasFont',
+      color:'white',
+      fontSize:width<700?width/17:width/38 
+    },
+    modalButtonText: {
+      fontFamily:'MidasFontBold',
+      color:'white',
+      fontSize:width<700?width/17:width/38 
+    },
+    modalWindow:{
+      marginRight:'auto', 
+      marginLeft:'auto', 
+      width:width>700?'40%':'90%', 
+      height:width>700?'22%':'27%', 
+      backgroundColor:'rgb(253,31,32)'
     }
-
   });
 
 

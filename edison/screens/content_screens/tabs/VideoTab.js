@@ -1,26 +1,60 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
-import {VideoItem} from '../components/'
-//import {MidasStyles} from '../../../constants/'
+import { View, Dimensions } from 'react-native'
+import {MidasStyles} from '../../../constants/'
+import {VideoCard} from '../../../components/'
+import {VideoLinks} from '../../../constants/'
+import { videoSet } from '../../../store/actions';
+import { connect } from "react-redux";
 
+const { width } = Dimensions.get("screen");
 
 class VideoTab extends Component {
 
-    // boardNavigate = (boardText) =>{
-    //     let navigator = this.props.navigation
-    //     this.props.boardSetFunction(boardText)
-    //     navigator.navigate('Classes')
-    // }
+    videoNavigate = (videoInfo, index) => {
+        this.props.videoSetFunction(index)
+        const videoMode = videoInfo['mode']
+        const videoPath =videoInfo['path']
+        const videoTitle = videoInfo['videoTitle']
+        const videoDescription = videoInfo['videoDescription']
+        const {navigation} = this.props
+        if(videoMode == 'offline'){
+            navigation.navigate('OfflineVideoPlayer', {
+                videoTitle : videoTitle,
+                videoPath: videoPath,
+                videoDescription: videoDescription
+            })
+
+        }
+        if(videoMode == 'online'){
+            navigation.navigate('OnlineVideoPlayer', {
+                videoTitle : videoTitle,
+                videoPath: videoPath
+            })
+
+        }
+    }
+
 
     render() {
-        const videos = ["D:\midasContent\earthRotation.mp4","D:\midasContent\nature.mp4","D:\midasContent\seaWaves.mp4"];
-        const videoElements = videos.map((videoUri, index)=><VideoItem boardText={videoUri} boardSubText={videoUri} key={index} />)
+        const videoElements = VideoLinks.map((info, index)=><VideoCard videoTitle={info.videoTitle} videoSubtitle={info.videoDescription} key={index} videoNavigate={() => {this.videoNavigate(info, index)}}/>)
         return (
-            <View style={{flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
+            <View>
                 {videoElements}
             </View>
         )
     }
 }
 
-export default VideoTab;
+const mapStateToProps = state => {
+    return {
+      videoIndex: state.contentInfo.videoIndex
+    };
+  };
+  
+const mapDispatchToProps = dispatch => {
+    return {
+        videoSetFunction: (videoIndex) => dispatch(videoSet(videoIndex))
+    };
+  };
+
+export default connect( mapStateToProps, mapDispatchToProps) (VideoTab);

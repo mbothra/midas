@@ -5,18 +5,21 @@ import { Text, TouchableRipple, Card, Title, Paragraph, Avatar } from 'react-nat
 import { connect } from "react-redux";
 import { Images } from '../constants/';
 import Database from '../utils/db_utils'
+import { userIdSet } from '../store/actions/index';
+import CommonUtils from '../utils/common_utils'
+import LoginUtils from '../utils/login_utils'
 
 const { width } = Dimensions.get("screen");
 
 class LoginScreen extends Component {
     state={
-        email:"",
+        userName:"",
         password:""
       }
 
-    setEmail = (email_input) => {
+    setUserName = (user_input) => {
         this.setState({
-            email:email_input
+            userName:user_input
         })
     }  
 
@@ -28,34 +31,40 @@ class LoginScreen extends Component {
 
     onSignup = () => {
         let me =this
-        Database.read('SELECT * FROM boards',null, this, 'roles_db')
+        Database.read('.SELECT * FROM sys.database_files',null, this, 'roles_db')
         setTimeout(() => {
             console.log(me.state.roles_db)
           }, 1000);   
           console.log(this.props)
 
-          conn = Database.getConnection()
-
             // Database.write('INSERT INTO users (user_name, password, school, address) values (?, ?, ?, ?)',["teacher","champion","hogwarts","heaven"], this, "user_id")
     }
 
     onLoginClick = () => {
-        const {email, password} = this.state
+        const {userName, password} = this.state
         let me=this
         const {navigation, role} = this.props
-        Database.read('SELECT * FROM users where user_name=?',[email], this, 'user_info')
+        // navigation.navigate('Boards')
+        Database.read('SELECT * FROM users where user_name=?',[userName], this, 'user_info')
         setTimeout(() => {
-            let securePassword = me.state.user_info['rows'][0]['password']
-            if(password == securePassword){
-                if(role=="Teacher"){
-                    navigation.navigate('Boards')
-                }
-            } 
+            console.log(this.props.userName)
+            if(me.state.user_info['rows'][0]){
+                let securePassword = me.state.user_info['rows'][0]['password']
+                const userId = me.state.user_info['rows'][0]['id']
+                if(password == securePassword){
+                    me.props.userIdSetFunction(userId)
+                    if(role=="Teacher"){
+                        LoginUtils.update_login_archive_for_user( userId, 'success')
+                        navigation.navigate('Boards')
+                    }
+                } 
+            }
+
         }, 100);  
     }
 
     render() {
-        const {email, password} = this.state
+        const {userName, password} = this.state
         const {role} = this.props
         const imgSize = width*0.21 
         let fontSize, cardWidth, buttonWidth
@@ -80,10 +89,10 @@ class LoginScreen extends Component {
         <Paragraph style={{textAlign:'center', fontFamily:'MidasFont', fontSize:fontSize*0.6}}>Lets get you started</Paragraph>
 
             <TextInput
-                label="Email"
-                value={email}
-                placeholder="   Email..." 
-                onChangeText={text => this.setEmail(text)}
+                label="UserName"
+                value={userName}
+                placeholder="   Username..." 
+                onChangeText={text => this.setUserName(text)}
                 style={MidasStyles.inputText}
                 />     
             <TextInput  
@@ -115,12 +124,14 @@ class LoginScreen extends Component {
 
 const mapStateToProps = state => {
     return {
-      role: state.boardInfo.role
+      role: state.boardInfo.role,
+      userId: state.boardInfo.userId
     };
   };
   
 const mapDispatchToProps = dispatch => {
     return {
+        userIdSetFunction: (userName) => dispatch(userIdSet(userName))
     };
   };
 

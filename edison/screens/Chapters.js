@@ -29,11 +29,10 @@ class Chapters extends Component {
         
         const cards = chapters.map((category, index)=>
                                     {
-                                        categoryCh = category.replace('Chapter','Ch')
-                                        return (<ChapterCard chapterNameText={categoryCh} chapterNameSubText={ContentProcessor.getDesciptionForChapter(board,category,classNum,subject)} key={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
+                                        return (<ChapterCard chapterNameText={category} chapterNameSubText={ContentProcessor.getDesciptionForChapter(board,category,classNum,subject)} key={index} id={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
                                     })
         return (
-            <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
+            <View style={{...MidasStyles.container, flex:1}}>
                 {cards}
             </View>
         )

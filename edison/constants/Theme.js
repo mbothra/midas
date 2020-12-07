@@ -1,4 +1,25 @@
-import { DefaultTheme } from 'react-native-paper';
+import { DefaultTheme, configureFonts } from 'react-native-paper';
+
+const fontConfig = {
+  default: {
+    regular: {
+      fontFamily: 'MidasFont',
+      fontWeight: 'normal',
+    },
+    medium: {
+      fontFamily: 'MidasFontBold',
+      fontWeight: 'normal',
+    },
+    light: {
+      fontFamily: 'MidasFont',
+      fontWeight: 'normal',
+    },
+    thin: {
+      fontFamily: 'MidasFont',
+      fontWeight: 'normal',
+    },
+  },
+};
 
 const theme = {
   ...DefaultTheme,
@@ -14,7 +35,9 @@ const theme = {
     disabled: '#BEC6C6',
     placeholder: '#1481BA',
     backdrop: '#001021',
-  }
+  },
+  fonts: configureFonts(fontConfig),
+
 };
 
 export default theme

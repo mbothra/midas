@@ -1,0 +1,45 @@
+import { View, Dimensions } from 'react-native';
+import { Button, Paragraph, Dialog, Portal, TouchableRipple, Text } from 'react-native-paper';
+
+import React, { Component } from 'react'
+import {MidasStyles } from "../constants";
+
+const { width } = Dimensions.get("screen");
+
+export default class ModalCard extends Component {
+    render() {
+        const {visible, hideModal, text, title, onConfirm} = this.props
+        let buttonWidth, dialogWidth
+        if(width< 700){
+            buttonWidth = '50%'
+            dialogWidth = '100%'
+        }
+        else{
+            buttonWidth = '40%'
+            dialogWidth = '50%'
+        }
+        return (
+            <View  style={MidasStyles.container}>
+            <Portal theme={{colors:{backdrop:'rgba(253,31,32,0.1)'}}}>
+              <Dialog visible={visible} onDismiss={hideModal} style={MidasStyles.modalWindow}>
+                <Dialog.Title style={MidasStyles.modalTitleText}>{title}</Dialog.Title>
+                <Dialog.Content>
+                  <Paragraph style={MidasStyles.modalText}>{text}</Paragraph>
+                </Dialog.Content>
+                <Dialog.Actions>
+                <View style={{flexDirection:'row', width:buttonWidth, marginRight:'20px'}}>
+                    <TouchableRipple style={MidasStyles.loginBtn} onPress={onConfirm}>
+                        <Text style={MidasStyles.modalButtonText}>Sure!!</Text>
+                    </TouchableRipple>
+
+                    <TouchableRipple style={MidasStyles.loginBtn} onPress={hideModal}>
+                        <Text style={MidasStyles.modalButtonText}>Cancel</Text>
+                    </TouchableRipple>  
+                </View>                
+                </Dialog.Actions>
+              </Dialog>
+            </Portal>
+          </View>
+        )
+    }
+}

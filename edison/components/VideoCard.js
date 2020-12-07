@@ -8,20 +8,10 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 
 const { width } = Dimensions.get("screen");
 
-export default class ChapterCard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-          expanded : false,
-        }
-
-        if (Platform.OS === 'android') {
-            UIManager.setLayoutAnimationEnabledExperimental(true);
-        }
-    }
+export default class VideoCard extends Component {
 
     render() {
-        const {chapterNameText, chapterNameSubText, id} = this.props
+        const {videoTitle, videoSubtitle} = this.props
         const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
         let cardWidth, fontSize
         if(width > 800){
@@ -32,14 +22,12 @@ export default class ChapterCard extends Component {
             cardWidth = width
             fontSize = width*0.06
         }
-        let processed_ch = chapterNameText.substring(0, chapterNameText.indexOf('-'));
-        let processed_ch_name = chapterNameText.substring(chapterNameText.indexOf('-')+1, chapterNameText.length);
 
         return (
             <View>
-                <TouchableRipple onPress={()=>{}} onFocus={this.props.chapterNavigate} rippleColor='rgba(253, 13, 32, 0.3)'>
+                <TouchableRipple onPress={()=>{}} onFocus={this.props.videoNavigate} >
                     <Card elevation={4} style={MidasStyles.chapterCardContainer}>
-                        <Card.Title title={processed_ch} subtitle={processed_ch_name} titleStyle={{fontFamily:'MidasFontBold', fontSize:fontSize}} subtitleStyle={{fontFamily:'MidasFont', fontSize:fontSize*0.8,}}/>
+                        <Card.Title title={videoTitle} subtitle={videoSubtitle} titleStyle={{fontFamily:'MidasFontBold', fontSize:fontSize}} subtitleStyle={{fontFamily:'MidasFont', fontSize:fontSize*0.8,}} left={LeftContent}/>
                     </Card>    
                 </TouchableRipple>     
             </View>

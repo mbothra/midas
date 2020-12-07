@@ -22,7 +22,7 @@ class Classes extends Component {
     render() {
         const {board} = this.props
         const classes = ContentProcessor.getClassesForBoard(board)
-        const cards = classes.map((category, index)=><ClassCard classNameText={category} classNameSubText={ContentProcessor.getClassCategory(board,category)} key={index} classNavigate={() => {this.classNavigate(category)}}/>)
+        const cards = classes.map((category, index)=><ClassCard classNameText={category} classNameSubText={ContentProcessor.getClassCategory(board,category)} key={index} id={index} classNavigate={() => {this.classNavigate(category)}}/>)
         return (
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}

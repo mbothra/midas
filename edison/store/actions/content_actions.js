@@ -1,4 +1,4 @@
-import { CONTENT_SET } from "./action_types";
+import { CONTENT_SET, VIDEO_SET } from "./action_types";
 
 export const contentSet = (newIndex,contentType) => {
 
@@ -6,5 +6,14 @@ export const contentSet = (newIndex,contentType) => {
         type: CONTENT_SET,
         contentIndexNew: newIndex,
         contentTypeNew: contentType
+    }
+}
+
+
+export const videoSet = (videoId) => {
+
+    return{
+        type: VIDEO_SET,
+        videoId: videoId
     }
 }

@@ -6,21 +6,43 @@ import {View, Image, TouchableOpacity } from 'react-native'
 import { Dimensions } from "react-native";
 import { connect } from "react-redux";
 import { roleSet } from '../store/actions/index';
+import LoginUtils from '../utils/login_utils'
+import { userIdSet } from '../store/actions/index';
 
 const { width } = Dimensions.get("screen");
 
 class Home extends Component {
-
+    state={
+        isLogin:false,
+        password:""
+      }
     navigationManager = (role) => {
         let navigator = this.props.navigation
         console.log(this.props)
         this.props.roleSetFunction(role)
-        if(role=='Teacher'){
-            navigator.navigate('LoginScreen')
-        }
-        else{
-            alert("Screen not available for the role")
-        }
+        LoginUtils.is_login_still_active(this)
+        setTimeout(() => {
+            console.log(this.state.isLogin)
+            if(this.state.isLogin){
+                this.props.userIdSetFunction(this.state.userId)
+                LoginUtils.update_login_archive_for_user(this.state.userId, 'success')
+                if(role=='Teacher'){
+                    navigator.navigate('Boards')
+                }
+                else{
+                    alert("Screen not available for the role")
+                }
+            }
+            else{
+                if(role=='Teacher'){
+                    navigator.navigate('LoginScreen')
+                }
+                else{
+                    alert("Screen not available for the role")
+                }
+            }
+        }, 100); 
+
     }
 
     getTextHomePage = () => {
@@ -34,7 +56,7 @@ class Home extends Component {
         }
 
         return (        
-        <View style={{flex:0.75}}>
+        <View style={{flex:0.5}}>
             <View style={{flexDirection:'row'}}>
                 <Text style={{fontSize:fontSize, fontFamily:'MidasFont'}}>Welcome to </Text>
                 <Text style={{fontSize:fontSize, fontFamily:'MidasFontBold'}}>Midas</Text>
@@ -102,7 +124,8 @@ const mapStateToProps = state => {
   
 const mapDispatchToProps = dispatch => {
     return {
-        roleSetFunction: (role) => dispatch(roleSet(role))
+        roleSetFunction: (role) => dispatch(roleSet(role)),
+        userIdSetFunction: (userName) => dispatch(userIdSet(userName))
     };
   };
 
