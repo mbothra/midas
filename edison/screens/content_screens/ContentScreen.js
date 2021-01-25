@@ -4,6 +4,7 @@ import { TabView, SceneMap } from 'react-native-tab-view';
 import { connect } from "react-redux";
 import { contentSet } from '../../store/actions/index';
 import {VideoTab} from './tabs';
+import ContentProcessor from '../ContentProcessor';
 
 
 const SecondRoute = () => (
@@ -14,9 +15,24 @@ const initialLayout = { width: Dimensions.get('window').width };
 
 class ContentScreen extends Component {
   VideoRoute = () => {
+    const i = 1;
+    const classNum = this.props.className.replace('Class ','');
+    
+    const {board,chapterName,className,subjectName,...otherProps } = this.props
+
+    const quizzes = ContentProcessor.getQuizzesForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName);
+      
+    const videos = ContentProcessor.getVideosForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName);
+    const assingments = ContentProcessor.getAssignmentsForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName);
+    const readings = ContentProcessor.getReadingsForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName); 
+     
     return (
       <View style={{flex:1}}>
-          <VideoTab navigation={this.props.navigation}/>
+          <VideoTab navigation={this.props.navigation} videos = {videos}/>
       </View>
     )
   }

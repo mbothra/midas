@@ -29,6 +29,7 @@ class Database  {
             console.log(objs[i]);
           }
         console.log(SQLite)
+
         conn.transaction(tx => {
             console.log(tx)
             create_table_queries.map((query) => {
@@ -56,12 +57,27 @@ class Database  {
     }
     read(query, paramsList, class_obj, state_name){
         let resultSet
+        //console.log(Expo.FileSystem.getInfoAsync('SQLite/<dbfilename>'))
         conn.transaction(tx => {
             tx.executeSql(query, paramsList,
               (txObj, obj) => { 
                   if(class_obj){
                         class_obj.setState({[state_name]:obj})
                   }
+                }, 
+              (txObj, error) => console.log('Error ', error)
+              )
+          })
+    }
+
+    executeQuery(query, paramsList){
+        let resultSet
+    
+        //console.log(Expo.FileSystem.getInfoAsync('SQLite/<dbfilename>'))
+        conn.transaction(tx => {
+            tx.executeSql(query, paramsList,
+              (txObj, obj) => { 
+                    return obj.rows
                 }, 
               (txObj, error) => console.log('Error ', error)
               )

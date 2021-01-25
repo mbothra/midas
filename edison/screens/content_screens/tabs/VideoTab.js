@@ -11,13 +11,16 @@ const { width } = Dimensions.get("screen");
 class VideoTab extends Component {
 
     videoNavigate = (videoInfo, index) => {
-        this.props.videoSetFunction(index)
-        const videoMode = videoInfo['mode']
-        const videoPath =videoInfo['path']
-        const videoTitle = videoInfo['videoTitle']
-        const videoDescription = videoInfo['videoDescription']
+        this.props.videoSetFunction(index);
+        const videoMode = 'offline';
+        if(videoInfo['IsOnline']==1){
+            videoMode = 'online'
+        }
+        const videoPath =videoInfo['URI']
+        const videoTitle = videoInfo['VideoTitle']
+        const videoDescription = videoInfo['Description']
         const {navigation} = this.props
-        if(videoMode == 'offline'){
+        if(videoMode === 'offline'){
             navigation.navigate('OfflineVideoPlayer', {
                 videoTitle : videoTitle,
                 videoPath: videoPath,
@@ -25,7 +28,7 @@ class VideoTab extends Component {
             })
 
         }
-        if(videoMode == 'online'){
+        if(videoMode === 'online'){
             navigation.navigate('OnlineVideoPlayer', {
                 videoTitle : videoTitle,
                 videoPath: videoPath
@@ -36,7 +39,8 @@ class VideoTab extends Component {
 
 
     render() {
-        const videoElements = VideoLinks.map((info, index)=><VideoCard videoTitle={info.videoTitle} videoSubtitle={info.videoDescription} key={index} videoNavigate={() => {this.videoNavigate(info, index)}}/>)
+        const videoLinksNew = this.props.videos;
+        const videoElements = videoLinksNew.map((info, index)=><VideoCard videoTitle={info.VideoTitle} videoSubtitle={info.Description} key={index} videoNavigate={() => {this.videoNavigate(info, index)}}/>)
         return (
             <View>
                 {videoElements}

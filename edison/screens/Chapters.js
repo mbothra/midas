@@ -26,7 +26,6 @@ class Chapters extends Component {
         classNum = classNum.replace('Class ','');
         const subject = this.props.subjectName;
         const chapters = ContentProcessor.getAllChapters(board,classNum,subject);
-        
         const cards = chapters.map((category, index)=>
                                     {
                                         return (<ChapterCard chapterNameText={category} chapterNameSubText={ContentProcessor.getDesciptionForChapter(board,category,classNum,subject)} key={index} id={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)

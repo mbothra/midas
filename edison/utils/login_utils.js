@@ -1,6 +1,7 @@
 import Database from './db_utils'
 import CommonUtils from './common_utils'
 import moment from 'moment'
+import QueryExecutor from './db_query_executor'
 
 format = "YYYY-MM-DD HH:mm:ss"
 
@@ -15,6 +16,8 @@ class LoginUtils  {
         sqliteDateFormat = CommonUtils.dateRenderer(new Date())
         params = [userId, sqliteDateFormat, status]
         Database.write(query,params)
+        //QueryExecutor.insert_chapters()
+
     }
     is_login_still_active = (class_obj, state_name='login_info') => {
         let conn = Database.getConnection()

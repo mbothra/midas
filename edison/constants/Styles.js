@@ -12,7 +12,7 @@ const MidasStyles = StyleSheet.create({
       backgroundColor: '#eaeaea',
       justifyContent: 'center',
       alignItems:'center',
-      backgroundImage:'linear-gradient(170deg, #fd0d20, #eaeaea, #eaeaea, white )'
+      //backgroundImage:'linear-gradient(170deg, #fd0d20, #eaeaea, #eaeaea, white )'
     },
     avatarContainer: {
         flexDirection:'row',
@@ -119,13 +119,13 @@ const MidasStyles = StyleSheet.create({
       width: '100%',
       borderRadius:5,
       paddingLeft:10,
-      fontSize:'20px'
+      fontSize:20
     },
     forgot:{
       color:"blue",
       fontSize:11,
       textAlign:"right",
-      alignContent:"right"
+      alignContent:"center"
     },
     loginBtn:{
       width:"50%",
@@ -138,7 +138,7 @@ const MidasStyles = StyleSheet.create({
       marginTop:5,
       marginBottom:10,
       marginRight: 5,
-      boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)'
+      //boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)'
 
     },
     loginText: {
