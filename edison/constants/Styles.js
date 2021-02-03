@@ -12,7 +12,7 @@ const MidasStyles = StyleSheet.create({
       backgroundColor: '#eaeaea',
       justifyContent: 'center',
       alignItems:'center',
-      //backgroundImage:'linear-gradient(170deg, #fd0d20, #eaeaea, #eaeaea, white )'
+      backgroundImage:'linear-gradient(170deg, #fd0d20, #eaeaea, #eaeaea, white )'
     },
     avatarContainer: {
         flexDirection:'row',
@@ -40,6 +40,16 @@ const MidasStyles = StyleSheet.create({
       marginBottom: 20,
       shadowColor: '#303838',
       shadowOffset: { width: 0, height: 5 },
+      shadowRadius: 10,
+      shadowOpacity: 0.35,
+    },
+    cardButton: {
+      backgroundColor: '#eaeaea',
+      borderRadius: 200,
+      padding: 10,
+      marginBottom: 20,
+      shadowColor: '#303838',
+      shadowOffset: { width: 0, height: 2 },
       shadowRadius: 10,
       shadowOpacity: 0.35,
     },
@@ -85,6 +95,16 @@ const MidasStyles = StyleSheet.create({
       backgroundColor:'white',
       fontFamily:'MidasFont',
   },
+  pdfCardContainer: {
+    marginLeft:10,
+    marginRight: 10,
+    marginTop:10,
+    marginBottom:10,
+    width:'auto',
+    backgroundColor:'white',
+    borderRadius:10,
+    fontFamily:'MidasFont'
+},
     subjectCardContainer: {
       marginLeft:10,
       marginRight: 10,

@@ -12,7 +12,7 @@ class VideoTab extends Component {
 
     videoNavigate = (videoInfo, index) => {
         this.props.videoSetFunction(index);
-        const videoMode = 'offline';
+        let videoMode = 'offline';
         if(videoInfo['IsOnline']==1){
             videoMode = 'online'
         }
@@ -20,15 +20,16 @@ class VideoTab extends Component {
         const videoTitle = videoInfo['VideoTitle']
         const videoDescription = videoInfo['Description']
         const {navigation} = this.props
-        if(videoMode === 'offline'){
+        if(true){
             navigation.navigate('OfflineVideoPlayer', {
                 videoTitle : videoTitle,
                 videoPath: videoPath,
-                videoDescription: videoDescription
+                videoDescription: videoDescription,
+                index:index
             })
 
         }
-        if(videoMode === 'online'){
+        else if(videoMode === 'online'){
             navigation.navigate('OnlineVideoPlayer', {
                 videoTitle : videoTitle,
                 videoPath: videoPath
@@ -40,9 +41,10 @@ class VideoTab extends Component {
 
     render() {
         const videoLinksNew = this.props.videos;
-        const videoElements = videoLinksNew.map((info, index)=><VideoCard videoTitle={info.VideoTitle} videoSubtitle={info.Description} key={index} videoNavigate={() => {this.videoNavigate(info, index)}}/>)
+        console.log(videoLinksNew)
+        const videoElements = videoLinksNew.map((info, index)=><VideoCard videoTitle={info.VideoTitle} videoSubtitle={info.Description} key={info.index} videoNavigate={() => {this.videoNavigate(info, info.ID)}}/>)
         return (
-            <View>
+            <View style={{flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {videoElements}
             </View>
         )

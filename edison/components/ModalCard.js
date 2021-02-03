@@ -8,7 +8,7 @@ const { width } = Dimensions.get("screen");
 
 export default class ModalCard extends Component {
     render() {
-        const {visible, hideModal, text, title, onConfirm} = this.props
+        const {visible, hideModal, text, title, onConfirm, okText, cancelText} = this.props
         let buttonWidth, dialogWidth
         if(width< 700){
             buttonWidth = '50%'
@@ -29,11 +29,11 @@ export default class ModalCard extends Component {
                 <Dialog.Actions>
                 <View style={{flexDirection:'row', width:buttonWidth, marginRight:'20px'}}>
                     <TouchableRipple style={MidasStyles.loginBtn} onPress={onConfirm}>
-                        <Text style={MidasStyles.modalButtonText}>Sure!!</Text>
+                        <Text style={MidasStyles.modalButtonText}>{okText}</Text>
                     </TouchableRipple>
 
                     <TouchableRipple style={MidasStyles.loginBtn} onPress={hideModal}>
-                        <Text style={MidasStyles.modalButtonText}>Cancel</Text>
+                        <Text style={MidasStyles.modalButtonText}>{cancelText}</Text>
                     </TouchableRipple>  
                 </View>                
                 </Dialog.Actions>

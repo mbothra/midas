@@ -58,7 +58,15 @@ class ContentProcessor{
         let mySet = new Set();
         let chapter1 = this.getChapter(board,chapter,classNumber,subject);
         let syllabusForChapter = this.getSyllabusMapForChapter(chapter1["ID"]);
-        const videoIdArray = syllabusForChapter["Videos"].split(",");
+        let videoIdArray
+        if(typeof syllabusForChapter["Videos"] === "number"){
+            videoIdArray = [];
+            videoIdArray[0] = syllabusForChapter["Videos"];
+
+        }
+        else{
+            videoIdArray = syllabusForChapter["Videos"].split(",");
+        }
         let jsonArray = videosContent;
         let records = jsonArray.content.record;
         for (i = 0; i < videoIdArray.length; i++) {
@@ -73,7 +81,16 @@ class ContentProcessor{
         let mySet = new Set();
         let chapter1 = this.getChapter(board,chapter,classNumber,subject);
         let syllabusForChapter = this.getSyllabusMapForChapter(chapter1["ID"]);
-        const assignmentIdArray = syllabusForChapter["Assignments"].split(",");
+        let assignmentIdArray
+        if(typeof syllabusForChapter["Assignments"] === "number"){
+            assignmentIdArray = [];
+            assignmentIdArray[0] = syllabusForChapter["Assignments"];
+
+        }
+        else{
+            assignmentIdArray = syllabusForChapter["Assignments"].split(",");
+        }
+
         let jsonArray = assignmentsContent;
         let records = jsonArray.content.record;
         for (i = 0; i < assignmentIdArray.length; i++) {

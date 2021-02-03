@@ -8,13 +8,15 @@ import Database from '../utils/db_utils'
 import { userIdSet } from '../store/actions/index';
 import CommonUtils from '../utils/common_utils'
 import LoginUtils from '../utils/login_utils'
+import { SignupCard} from '../components/'
 
 const { width } = Dimensions.get("screen");
 
 class LoginScreen extends Component {
     state={
         userName:"",
-        password:""
+        password:"",
+        visibleSignout:false
       }
 
     setUserName = (user_input) => {
@@ -30,15 +32,26 @@ class LoginScreen extends Component {
     }  
 
     onSignup = () => {
-        let me =this
-        Database.read('.SELECT * FROM sys.database_files',null, this, 'roles_db')
-        setTimeout(() => {
-            console.log(me.state.roles_db)
-          }, 1000);   
-          console.log(this.props)
+        // let me =this
+        // Database.read('.SELECT * FROM sys.database_files',null, this, 'roles_db')
+        // setTimeout(() => {
+        //     console.log(me.state.roles_db)
+        //   }, 1000);   
+        //   console.log(this.props)
 
             // Database.write('INSERT INTO users (user_name, password, school, address) values (?, ?, ?, ?)',["teacher","champion","hogwarts","heaven"], this, "user_id")
-    }
+            this.setState({
+                visible:true
+              })
+        }
+
+        hideLogoutModal = () => {
+            console.log(this.props)
+            this.setState({
+                visible:false
+            })
+          } 
+        
 
     onLoginClick = () => {
         const {userName, password} = this.state
@@ -64,7 +77,7 @@ class LoginScreen extends Component {
     }
 
     render() {
-        const {userName, password} = this.state
+        const {userName, password, visible} = this.state
         const {role} = this.props
         const imgSize = width*0.21 
         let fontSize, cardWidth, buttonWidth
@@ -79,8 +92,12 @@ class LoginScreen extends Component {
             cardWidth = '35%'
             buttonWidth = '40%'
         }
+        const SignupText = "Please Contact Thinksharp team at the following email or Contact, to get your login generated."
+        const contactInfo =  "Email -  info@thinksharpfoundation.org, Mobile - 9892742011"
         return (
             <View style={MidasStyles.container}>
+                    {/* <SignupCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
+                                    text='Please Contact Thinksharp team at the following email or Contact, to get your login generated' title='Logout' okText="Email - info@thinksharpfoundation.org" cancelText="MObile - 9892742011"/> */}
                   <Image source={Images.Logo} style={{width: imgSize, height: imgSize}}/>
                   <View style={{flex:0.1}}/>
                 <Card style={{width:cardWidth}}>
@@ -104,7 +121,7 @@ class LoginScreen extends Component {
             </Card.Content>
             </Card>
             <View style={{flex:0.05}}/>
-               <TouchableRipple style={{alignContent:'left'}}>
+               <TouchableRipple style={{alignContent:'left'}} onPress={() => this.onSignup()}>
                       <Text style={MidasStyles.forgot}>Forgot Password?</Text>
                 </TouchableRipple>   
                 <View style={{flex:0.05}}/> 
@@ -117,6 +134,9 @@ class LoginScreen extends Component {
                     <Text style={MidasStyles.loginText}>Login</Text>
                 </TouchableRipple>  
             </View>
+            {visible?<Paragraph  style={{fontFamily:'MidasFont', fontSize:width*0.02}}>{SignupText}</Paragraph>:null}
+            {visible?<Paragraph  style={{fontFamily:'MidasFont', fontSize:width*0.02}}>{contactInfo}</Paragraph>:null}
+
             </View>
         )
     }

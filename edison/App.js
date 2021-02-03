@@ -56,6 +56,8 @@ export default class App extends Component  {
         return Asset.fromModule(gif).downloadAsync();
       });
 
+      
+
       await Promise.all(cacheImages);
       await Promise.all(cacheGifs);
     } catch (e) {

@@ -13,7 +13,8 @@ const iconList = {
     "Science":"flask",
     "History":"map",
     "Civics":"gavel",
-    "Geography":"earth"
+    "Geography":"earth",
+    "Marathi":"typewriter"
 }
 
 class SubjectCard extends Component {

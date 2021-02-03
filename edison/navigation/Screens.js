@@ -14,6 +14,7 @@ import ContentScreen from "../screens/content_screens/ContentScreen";
 import LoginScreen from "../screens/LoginScreen";
 import OfflineVideoPlayer from "../screens/content_screens/players/OfflineVideoPlayer";
 import OnlineVideoPlayer from "../screens/content_screens/players/OnlineVideoPlayer";
+import OfflinePdfReader from "../screens/content_screens/players/OfflinePdfReader";
 
 import {HeaderComponent, ModalCard} from '../components/'
 import { Images } from '../constants/';
@@ -97,7 +98,7 @@ class Screens extends Component {
                         <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
                         </TouchableRipple>
                         <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
-                                    text='Are you sure you want to logout?' title='Logout'/>
+                                    text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
                       headerLeft: (props) => (
@@ -131,7 +132,7 @@ class Screens extends Component {
                         <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
                         </TouchableRipple>
                         <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
-                                    text='Are you sure you want to logout?' title='Logout'/>
+                                    text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
                   })}
@@ -157,7 +158,7 @@ class Screens extends Component {
                         <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
                         </TouchableRipple>
                         <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
-                                    text='Are you sure you want to logout?' title='Logout'/>
+                                    text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
                   })}
@@ -183,7 +184,7 @@ class Screens extends Component {
                         <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
                         </TouchableRipple>
                         <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
-                                    text='Are you sure you want to logout?' title='Logout'/>
+                                    text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
                   })}          />
@@ -208,7 +209,7 @@ class Screens extends Component {
                         <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
                         </TouchableRipple>
                         <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
-                                    text='Are you sure you want to logout?' title='Logout'/>
+                                    text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
                   })}
@@ -239,11 +240,39 @@ class Screens extends Component {
                     <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
                     </TouchableRipple>
                     <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
-                                text='Are you sure you want to logout?' title='Logout'/>
+                                text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                     </View>
                   ),
               })}
           />  
+
+          <Stack.Screen name='OfflinePdfReader' component={OfflinePdfReader} 
+              options={({navigation})=>({
+                headerShown: true,
+                  title: 'Lets Learn',
+                  headerStyle: {
+                    backgroundColor: '#fd0d20',
+                    height: headerHeight,
+                    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+                  },
+                  headerTintColor: 'white',
+                  headerTitleStyle: {
+                    fontWeight: 'bold',
+                    fontFamily:'MidasFontBold',
+                    fontSize:headerSize
+                  },
+                  headerRight: () => (
+                    <View>
+                    <TouchableRipple onPress={this.showLogoutModal}>
+                    <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
+                    </TouchableRipple>
+                    <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
+                                text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
+                    </View>
+                  ),
+              })}
+          />  
+
           <Stack.Screen name='OnlineVideoPlayer' component={OnlineVideoPlayer} 
             options={{
               headerShown: false,

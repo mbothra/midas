@@ -6,6 +6,7 @@ import Gifs from './Gifs';
 import Categories from './BoardCategories';
 import CardColorList from './CardColorList';
 import VideoLinks from './VideoLinks';
+import PdfLinks from './PdfLinks';
 
 export {
   MidasTheme,
@@ -15,5 +16,6 @@ export {
   Gifs,
   Categories,
   CardColorList,
-  VideoLinks
+  VideoLinks,
+  PdfLinks
 };

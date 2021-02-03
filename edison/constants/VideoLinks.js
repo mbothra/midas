@@ -6,16 +6,16 @@ const VideoInfo = [
         'path':require("../assets/videos/bugs.mp4")
     },
     {
-        'videoTitle':'Amit',
-        'videoDescription':'Amit saying hi to aparana',
+        'videoTitle':'Work',
+        'videoDescription':'Lets understand Work',
         'mode':'offline',
-        'path':require('../assets/videos/amit.mp4')
+        'path':require('../assets/videos/work.mp4')
     },
     {
-        'videoTitle':'Strawberries and cigarettes',
-        'videoDescription':'By Troye Sivan',
+        'videoTitle':'Hello World',
+        'videoDescription':'Sy Hi By Amit Vishnoi',
         'mode':'offline',
-        'path':'https://www.youtube.com/watch?v=Mw5mAozjC6M'
+        'path':'../assets/videos/amit.mp4'
     },
     {
         'videoTitle':'O Sanam',

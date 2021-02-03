@@ -5,6 +5,10 @@ import ChapterCard from './ChapterCard';
 import HeaderComponent from './HeaderComponent';
 import ModalCard from './ModalCard';
 import VideoCard from './VideoCard';
+import PdfCard from './PdfCard';
+import AssignmentCard from './AssignmentCard';
+import QuizCard from './QuizCard';
+import SignupCard from './SignupCard';
 
 export {
     BoardCard,
@@ -13,5 +17,9 @@ export {
     ChapterCard,
     HeaderComponent,
     ModalCard,
-    VideoCard
+    VideoCard,
+    PdfCard,
+    AssignmentCard,
+    QuizCard,
+    SignupCard
   };

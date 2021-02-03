@@ -27,15 +27,6 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<Chapter>Chapter: 3-Tahanlela Kavla</Chapter>
 		<Description>Tahanlela Kavla is story about thrusty crow</Description>
 	</record>
-	<record>
-		<ID>4</ID>
-		<Board>MSB</Board>
-		<Class>1</Class>
-		<ClassCategory>Primary</ClassCategory>
-		<Subject>Marathi</Subject>
-		<Chapter>Chapter: 4-Lapachapi</Chapter>
-		<Description>Lapachapi is story about game</Description>
-	</record>
 	</content>`;
 
 const videos_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -44,7 +35,7 @@ const videos_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 			<ID>1</ID>
 			<VideoTitle>Yet Ani Yet Nahi</VideoTitle>
 			<IsOnline>0</IsOnline>
-			<URI>require("../assets/videos/YET_ANI_YET_NAHI.mp4")</URI>
+			<URI>D:/midas/edison/assets/videos/YET_ANI_YET_NAHI.mp4</URI>
 			<Provider>1</Provider>
 			<References>1,2</References>
 			<Description>The Video covers story of two village girls</Description>
@@ -82,7 +73,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>1</ID>
 		<ReadingTitle>Where do they go</ReadingTitle>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/readings/ceen102.pdf")</URI>
+		<URI>http://localhost:8888/ceen102.pdf</URI>
 		<Provider>2</Provider>
 		<Description>Story about two friends who lost in town</Description>
 		<References>reference link, if any</References>
@@ -91,7 +82,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>2</ID>
 		<ReadingTitle>Too big too small</ReadingTitle>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/readings/ceen103.pdf")</URI>
+		<URI>http://localhost:8888/ceen103.pdf</URI>
 		<Provider>2</Provider>
 		<Description>Story about fresh watermelon from riverside</Description>
 		<References>reference link, if any</References>
@@ -100,7 +91,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>3</ID>
 		<ReadingTitle>Simple counting</ReadingTitle>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/readings/ceen104.pdf")</URI>
+		<URI>http://localhost:8888/ceen104.pdf</URI>
 		<Provider>2</Provider>
 		<Description>Learning of counting from game</Description>
 		<References>reference link, if any</References>
@@ -109,7 +100,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>4</ID>
 		<ReadingTitle>Rainbow visits the village</ReadingTitle>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/readings/ceen105.pdf")</URI>
+		<URI>http://localhost:8888/ceen105.pdf</URI>
 		<Provider>2</Provider>
 		<Description>story about rainbow in village</Description>
 		<References>reference link, if any</References>
@@ -120,9 +111,9 @@ const assignments_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<record>
 		<ID>1</ID>
-		<Title>Write down the your intake from story</Title>
+		<Title>Write down your intake from story</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/assignments/ceen102.pdf")</URI>
+		<URI>http://localhost:8888/assignment1.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
 		<References>reference link, if any</References>
@@ -131,7 +122,7 @@ const assignments_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>2</ID>
 		<Title>Write down the your intake from story</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/assignments/ceen103.pdf")</URI>
+		<URI>http://localhost:8888/assignment2.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
 		<References>reference link, if any</References>
@@ -140,7 +131,7 @@ const assignments_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>3</ID>
 		<Title>Write down the your intake from story</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/assignments/ceen104.pdf")</URI>
+		<URI>http://localhost:8888/assignment1.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
 		<References>reference link, if any</References>
@@ -149,7 +140,7 @@ const assignments_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>4</ID>
 		<Title>Write down the your intake from story</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/assignments/ceen105.pdf")</URI>
+		<URI>http://localhost:8888/assignment2.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
 		<References>reference link, if any</References>
@@ -162,7 +153,7 @@ const quizzes_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>1</ID>
 		<Title>How many colors in rainbow?</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/quizzes/ceen102.pdf")</URI>
+		<URI>http://localhost:8888/quiz1.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Description of reading</Description>
 		<References>reference link, if any</References>
@@ -171,7 +162,7 @@ const quizzes_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>2</ID>
 		<Title>When rainbow can seen?</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/quizzes/ceen103.pdf")</URI>
+		<URI>http://localhost:8888/quiz2.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Description of reading</Description>
 		<References>reference link, if any</References>
@@ -180,7 +171,7 @@ const quizzes_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>3</ID>
 		<Title>Who was thursty?</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/quizzes/ceen104.pdf")</URI>
+		<URI>http://localhost:8888/quiz1.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Description of reading</Description>
 		<References>reference link, if any</References>
@@ -189,7 +180,7 @@ const quizzes_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>4</ID>
 		<Title>How many friends went to town?</Title>
 		<IsOnline>0</IsOnline>
-		<URI>require("../assets/quizzes/ceen105.pdf")</URI>
+		<URI>http://localhost:8888/quiz2.pdf</URI>
 		<Provider>1</Provider>
 		<Description>Description of reading</Description>
 		<References>reference link, if any</References>
@@ -201,15 +192,15 @@ const syllabus_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<record>
 			<ID>1</ID>
 			<ChapterID>1</ChapterID>
-			<Videos>1,2</Videos>
+			<Videos>1,2,3</Videos>
 			<Readings>1,2</Readings>
 			<Assignments>1,2,3</Assignments>
-			<Quizzes>1</Quizzes>
+			<Quizzes>1,2,4,3</Quizzes>
 		</record>
 		<record>
 			<ID>2</ID>
 			<ChapterID>2</ChapterID>
-			<Videos>1,2</Videos>
+			<Videos>4</Videos>
 			<Readings>1,2</Readings>
 			<Assignments>1,2,3</Assignments>
 			<Quizzes>1</Quizzes>

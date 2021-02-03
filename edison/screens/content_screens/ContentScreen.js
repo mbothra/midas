@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Dimensions, StatusBar } from 'react-native';
-import { TabView, SceneMap } from 'react-native-tab-view';
+import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import { connect } from "react-redux";
 import { contentSet } from '../../store/actions/index';
 import {VideoTab} from './tabs';
 import ContentProcessor from '../ContentProcessor';
+import {PdfTab} from './tabs';
+import {AssignmentTab} from './tabs';
+import {QuizTab} from './tabs';
 
 
 const SecondRoute = () => (
@@ -27,12 +30,44 @@ class ContentScreen extends Component {
       this.props.chapterName,this.props.className,this.props.subjectName);
     const assingments = ContentProcessor.getAssignmentsForChapter(this.props.board,
       this.props.chapterName,this.props.className,this.props.subjectName);
-    const readings = ContentProcessor.getReadingsForChapter(this.props.board,
-      this.props.chapterName,this.props.className,this.props.subjectName); 
      
     return (
       <View style={{flex:1}}>
           <VideoTab navigation={this.props.navigation} videos = {videos}/>
+      </View>
+    )
+  }
+
+  PdfRoute = () => {
+    const readings = ContentProcessor.getReadingsForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName); 
+
+    return (
+      <View style={{flex:1}}>
+          <PdfTab navigation={this.props.navigation} readings={readings}/>
+      </View>
+    )
+  }
+
+
+  AssignmentRoute = () => {
+    const assignments = ContentProcessor.getAssignmentsForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName); 
+
+    return (
+      <View style={{flex:1}}>
+          <AssignmentTab navigation={this.props.navigation} assignments={assignments}/>
+      </View>
+    )
+  }
+
+  QuizRoute = () => {
+    const quizzes = ContentProcessor.getQuizzesForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName); 
+
+    return (
+      <View style={{flex:1}}>
+          <QuizTab navigation={this.props.navigation} quizzes={quizzes}/>
       </View>
     )
   }
@@ -57,11 +92,15 @@ class ContentScreen extends Component {
       ];
   let  me = this
   const VideoRoute = () => (this.VideoRoute())
+  const PdfRoute = () => (this.PdfRoute())
+  const AssignmentRoute = () => (this.AssignmentRoute())
+  const QuizRoute = () => (this.QuizRoute())
+
    const renderScene = SceneMap({
     videos: VideoRoute,
-    readings: SecondRoute,
-    assignments: SecondRoute,
-    quizzes: SecondRoute,
+    readings: PdfRoute,
+    assignments: AssignmentRoute,
+    quizzes: QuizRoute,
    });
 
 
@@ -72,6 +111,7 @@ class ContentScreen extends Component {
           onIndexChange={this.handleIndexChange}
           initialLayout={initialLayout}
           style={styles.container}
+          renderTabBar={props => <TabBar {...props} style={{backgroundColor:'black'}}/>}
         />
       );
   }
