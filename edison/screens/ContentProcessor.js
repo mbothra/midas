@@ -10,6 +10,9 @@ const readingsContent = parse(Content.readings_xml);
 const assignmentsContent = parse(Content.assignments_xml);
 const quizzesContent = parse(Content.quizzes_xml);
 
+const providers=parse(Content.providers_xml);
+const referencesContent=parse(Content.references_xml);
+
 //const boards = QueryExecutor.getAllBoards();
 
 class ContentProcessor{
@@ -78,6 +81,33 @@ class ContentProcessor{
         let records = jsonArray.content.record;
         for (i = 0; i < assignmentIdArray.length; i++) {
             let filteredRecord = records.find(d => d.ID==parseInt(assignmentIdArray[i]));
+            mySet.add(filteredRecord);
+        }
+        return Array.from(mySet);
+    }
+
+    static getContentProvider(id){
+
+        let jsonArray = providers;
+        let records = jsonArray.content.record;
+
+        let filteredRecord = records.find(d => d.ID==parseInt(id));
+
+        return filteredRecord;
+    }
+
+    static getReferences(referenceIds){
+        let mySet = new Set();
+        if(typeof referenceIds === "number"){
+            referenceIdArray = [];
+            referenceIdArray[0] = referenceIds;
+        }else{
+            referenceIdArray = referenceIds.split(",");
+        }
+        let jsonArray = referencesContent;
+        let records = jsonArray.content.record;
+        for (i = 0; i < referenceIdArray.length; i++) {
+            let filteredRecord = records.find(d => d.ID==parseInt(referenceIdArray[i]));
             mySet.add(filteredRecord);
         }
         return Array.from(mySet);
