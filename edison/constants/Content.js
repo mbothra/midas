@@ -186,6 +186,40 @@ const quizzes_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<References>reference link, if any</References>
 	</record>
 </content>`;
+
+const references_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <record>
+		<ID>1</ID>
+		<ReferenceTitle>Divisibility Tests-Khan Academy</ReferenceTitle>
+       <ReferenceLink>https://www.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-divisibility-tests/v/divisibility-tests-for-2-3-4-5-6-9-10</ReferenceLink>
+    </record>
+    <record>
+		<ID>2</ID>
+		<ReferenceTitle>Ordinals-YouTube</ReferenceTitle>
+       <ReferenceLink>https://www.youtube.com/watch?v=e3WZ-0-CwtY</ReferenceLink>
+    </record>
+</Book2>`;
+
+const providers_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <record>
+		<ID>1</ID>
+		<Name>Thinksharp Foundation</Name>
+       <Shortname>Thinksharp</Shortname>
+	   <Logo>SS/dfsa/fdsa</Logo>
+       <Comment1>any other relevant info</Comment1>
+	   <Comment2>any other relevant info</Comment2>
+    </record>
+    <record>
+		<ID>1</ID>
+		<Name>Pratham Infotech Foundation</Name>
+       <Shortname>Pratham Infotech Foundation</Shortname>
+	   <Logo>SS/dfsa/fdsa</Logo>
+       <Comment1>any other relevant info</Comment1>
+	   <Comment2>any other relevant info</Comment2>
+    </record>
+</content>`;
 	
 const syllabus_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 	<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -217,4 +251,4 @@ const syllabus_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 	
 
 
-export default {xml_data,videos_xml,syllabus_xml,readings_xml,assignments_xml,quizzes_xml};
+export default {xml_data,videos_xml,syllabus_xml,readings_xml,assignments_xml,quizzes_xml,references_xml,providers_xml};

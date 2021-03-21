@@ -25,11 +25,15 @@ class ContentScreen extends Component {
 
     const quizzes = ContentProcessor.getQuizzesForChapter(this.props.board,
       this.props.chapterName,this.props.className,this.props.subjectName);
-      
+
     const videos = ContentProcessor.getVideosForChapter(this.props.board,
       this.props.chapterName,this.props.className,this.props.subjectName);
     const assingments = ContentProcessor.getAssignmentsForChapter(this.props.board,
       this.props.chapterName,this.props.className,this.props.subjectName);
+    const readings = ContentProcessor.getReadingsForChapter(this.props.board,
+      this.props.chapterName,this.props.className,this.props.subjectName); 
+    const providers = ContentProcessor.getContentProvider(1);
+    const references = ContentProcessor.getReferences('1,2');  
      
     return (
       <View style={{flex:1}}>
