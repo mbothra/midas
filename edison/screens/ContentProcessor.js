@@ -62,7 +62,10 @@ class ContentProcessor{
         let chapter1 = this.getChapter(board,chapter,classNumber,subject);
         let syllabusForChapter = this.getSyllabusMapForChapter(chapter1["ID"]);
         let videoIdArray
-        if(typeof syllabusForChapter["Videos"] === "number"){
+        if(syllabusForChapter["Videos"] === undefined){
+            return [];
+        }
+        else if(typeof syllabusForChapter["Videos"] === "number"){
             videoIdArray = [];
             videoIdArray[0] = syllabusForChapter["Videos"];
 
@@ -85,7 +88,10 @@ class ContentProcessor{
         let chapter1 = this.getChapter(board,chapter,classNumber,subject);
         let syllabusForChapter = this.getSyllabusMapForChapter(chapter1["ID"]);
         let assignmentIdArray
-        if(typeof syllabusForChapter["Assignments"] === "number"){
+        if(syllabusForChapter["Assignments"] === undefined){
+            return [];
+        }
+        else if(typeof syllabusForChapter["Assignments"] === "number"){
             assignmentIdArray = [];
             assignmentIdArray[0] = syllabusForChapter["Assignments"];
 
@@ -134,7 +140,15 @@ class ContentProcessor{
         let mySet = new Set();
         let chapter1 = this.getChapter(board,chapter,classNumber,subject);
         let syllabusForChapter = this.getSyllabusMapForChapter(chapter1["ID"]);
-        const readingsIdArray = syllabusForChapter["Readings"].split(",");
+        let readingsIdArray1 = syllabusForChapter["Readings"];
+        let readingsIdArray
+        if(typeof readingsIdArray1 === "number"){
+            readingsIdArray = [];
+            readingsIdArray[0] = readingsIdArray1;
+        }else{
+            readingsIdArray = readingsIdArray1.split(",");
+        }
+
         let jsonArray = readingsContent;
         let records = jsonArray.content.record;
         for (i = 0; i < readingsIdArray.length; i++) {
@@ -150,7 +164,10 @@ class ContentProcessor{
         let syllabusForChapter = this.getSyllabusMapForChapter(chapter1["ID"]);
         const quizString = syllabusForChapter["Quizzes"];
         var quizzesIdArray = syllabusForChapter["Quizzes"];
-        if(typeof quizString === "number"){
+        if(quizzesIdArray === undefined){
+            return [];
+        }
+        else if(typeof quizString === "number"){
             quizzesIdArray = [];
             quizzesIdArray[0] = quizString;
         }else{

@@ -78,8 +78,8 @@ class ContentScreen extends Component {
 
     handleIndexChange = newIndex => {
         const contentTypeMap = new Map();
-        contentTypeMap.set(0,'videos');
-        contentTypeMap.set(1,'readings');
+        contentTypeMap.set(0,'readings');
+        contentTypeMap.set(1,'videos');
         contentTypeMap.set(2,'assignments');
         contentTypeMap.set(3,'quizzes');
 
@@ -89,8 +89,8 @@ class ContentScreen extends Component {
   render(){
     let index =this.props.contentIndex;
     let routes = [
-        { key: 'videos', title: 'Videos' },
         { key: 'readings', title: 'Readings' },
+        { key: 'videos', title: 'Videos' },
         { key: 'assignments', title: 'Assignments' },
         { key: 'quizzes', title: 'Quizzes' }
       ];
@@ -101,8 +101,8 @@ class ContentScreen extends Component {
   const QuizRoute = () => (this.QuizRoute())
 
    const renderScene = SceneMap({
-    videos: VideoRoute,
     readings: PdfRoute,
+    videos: VideoRoute,
     assignments: AssignmentRoute,
     quizzes: QuizRoute,
    });
