@@ -7,6 +7,7 @@ import {ChapterCard} from '../components/'
 import {MidasStyles} from '../constants/'
 import ContentProcessor from './ContentProcessor';
 import { ScrollView } from 'react-native-gesture-handler';
+import {FABGroup} from '../components/'
 
 class Chapters extends Component {
 
@@ -31,8 +32,11 @@ class Chapters extends Component {
                                         return (<ChapterCard chapterNameText={category} chapterNameSubText={ContentProcessor.getDesciptionForChapter(board,category,classNum,subject)} key={index} id={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
                                     })
         return (
+            <View style={MidasStyles.FABContainer}>
             <View style={{...MidasStyles.container, flex:1}}>
                 {cards}
+            </View>
+            <FABGroup></FABGroup>
             </View>
         )
     }

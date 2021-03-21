@@ -11,7 +11,7 @@ import { Dimensions } from "react-native";
 import 'react-native-gesture-handler';
 // Before rendering any navigation stack
 import { enableScreens } from "react-native-screens";
-import { Images, MidasTheme, Gifs } from "./constants";
+import { Images, MidasTheme } from "./constants";
 import { Provider } from 'react-redux'; 
 import configStore from './store/config_store';
 
@@ -27,10 +27,6 @@ const assetImages = [
   Images.TeacherIcon
 ];
 
-const assetGifs = [
-  Gifs.Spark
-]
-
 export default class App extends Component  {
 
   
@@ -39,8 +35,8 @@ export default class App extends Component  {
   }
 
   _cacheSplashResourcesAsync = async () => {
-    const gif = require('./assets/gifs/spark.gif');
-    return Asset.fromModule(gif).downloadAsync();
+    // const gif = require('./assets/gifs/spark.gif');
+    // return Asset.fromModule(gif).downloadAsync();
   };
 
   _cacheResourcesAsync = async () => {

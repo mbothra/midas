@@ -6,6 +6,7 @@ import {Categories} from '../constants/'
 import {ClassCard} from '../components/'
 import {MidasStyles} from '../constants/'
 import ContentProcessor from '../screens/ContentProcessor';
+import {FABGroup} from '../components/'
 
 class Classes extends Component {
 
@@ -24,8 +25,11 @@ class Classes extends Component {
         const classes = ContentProcessor.getClassesForBoard(board)
         const cards = classes.map((category, index)=><ClassCard classNameText={category} classNameSubText={ContentProcessor.getClassCategory(board,category)} key={index} id={index} classNavigate={() => {this.classNavigate(category)}}/>)
         return (
+            <View style={MidasStyles.FABContainer}>
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}
+            </View>
+            <FABGroup></FABGroup>
             </View>
         )
     }

@@ -14,6 +14,13 @@ const MidasStyles = StyleSheet.create({
       alignItems:'center',
       backgroundImage:'linear-gradient(170deg, #fd0d20, #eaeaea, #eaeaea, white )'
     },
+    FABContainer:{
+      flex: 1,
+    },
+    CustomFABButton:{
+      // transform:scale(1.25),
+      backgroundColor:'#fd0d20'
+    },
     avatarContainer: {
         flexDirection:'row',
         justifyContent: 'center',

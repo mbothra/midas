@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import { View, Dimensions } from "react-native";
+import { View, Dimensions, TouchableOpacity } from "react-native";
 import { Avatar, Modal, TouchableRipple } from 'react-native-paper';
 
 import { createStackNavigator } from "@react-navigation/stack";
@@ -13,8 +13,8 @@ import Chapters from "../screens/Chapters";
 import ContentScreen from "../screens/content_screens/ContentScreen";
 import LoginScreen from "../screens/LoginScreen";
 import OfflineVideoPlayer from "../screens/content_screens/players/OfflineVideoPlayer";
-import OnlineVideoPlayer from "../screens/content_screens/players/OnlineVideoPlayer";
-import OfflinePdfReader from "../screens/content_screens/players/OfflinePdfReader";
+// import OnlineVideoPlayer from "../screens/content_screens/players/OnlineVideoPlayer";
+// import OfflinePdfReader from "../screens/content_screens/players/OfflinePdfReader";
 
 import {HeaderComponent, ModalCard} from '../components/'
 import { Images } from '../constants/';
@@ -90,7 +90,9 @@ class Screens extends Component {
                       headerTitleStyle: {
                         fontWeight: 'bold',
                         fontFamily:'MidasFontBold',
-                        fontSize:headerSize
+                        fontSize:headerSize,
+                        marginLeft: '70px'
+
                       },
                       headerRight: () => (
                         <View>
@@ -101,14 +103,15 @@ class Screens extends Component {
                                     text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
-                      headerLeft: (props) => (
-                        <HeaderBackButton
-                          {...props}
-                          onPress={() => {
-                              navigation.navigate('Home')
-                          }}
-                        />
-                      ),
+                      headerLeft: ({ goBack }) => (
+                        <View style={{flexDirection:'row'}}>
+                          <TouchableRipple onPress={() => navigation.navigate('Home')}>
+                         <Avatar.Icon onPress={ () => { goBack() } } icon='arrow-left' style={{backgroundColor:null}}/>
+                          </TouchableRipple>
+                          <Avatar.Image source={require('../assets/imgs/logo.png')} style={{backgroundColor:'white'}}/>                     
+                        </View>   
+                    ),  
+
                   })}
           />  
           <Stack.Screen name='Classes' component={Classes} 
@@ -124,7 +127,9 @@ class Screens extends Component {
                       headerTitleStyle: {
                         fontWeight: 'bold',
                         fontFamily:'MidasFontBold',
-                        fontSize:headerSize
+                        fontSize:headerSize,
+                        marginLeft: '70px'
+
                       },
                       headerRight: () => (
                         <View>
@@ -135,6 +140,14 @@ class Screens extends Component {
                                     text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
+                      headerLeft: ({ goBack }) => (
+                        <View style={{flexDirection:'row'}}>
+                          <TouchableRipple onPress={() => navigation.navigate('Boards')}>
+                         <Avatar.Icon onPress={ () => { goBack() } } icon='arrow-left' style={{backgroundColor:null}}/>
+                          </TouchableRipple>
+                          <Avatar.Image source={require('../assets/imgs/logo.png')} style={{backgroundColor:'white'}}/>                     
+                        </View>   
+                    ),  
                   })}
           />  
           <Stack.Screen name='Subjects' component={Subjects} 
@@ -150,7 +163,9 @@ class Screens extends Component {
                       headerTitleStyle: {
                         fontWeight: 'bold',
                         fontFamily:'MidasFontBold',
-                        fontSize:headerSize
+                        fontSize:headerSize,
+                        marginLeft: '70px'
+
                       },
                       headerRight: () => (
                         <View>
@@ -161,6 +176,14 @@ class Screens extends Component {
                                     text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
+                      headerLeft: ({ goBack }) => (
+                        <View style={{flexDirection:'row'}}>
+                          <TouchableRipple onPress={() => navigation.navigate('Classes')}>
+                         <Avatar.Icon onPress={ () => { goBack() } } icon='arrow-left' style={{backgroundColor:null}}/>
+                          </TouchableRipple>
+                          <Avatar.Image source={require('../assets/imgs/logo.png')} style={{backgroundColor:'white'}}/>                     
+                        </View>   
+                    ),  
                   })}
           />  
           <Stack.Screen name='Chapters' component={Chapters} 
@@ -176,7 +199,9 @@ class Screens extends Component {
                       headerTitleStyle: {
                         fontWeight: 'bold',
                         fontFamily:'MidasFontBold',
-                        fontSize:headerSize
+                        fontSize:headerSize,
+                        marginLeft: '70px'
+
                       },
                       headerRight: () => (
                         <View>
@@ -187,6 +212,14 @@ class Screens extends Component {
                                     text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
+                      headerLeft: ({ goBack }) => (
+                        <View style={{flexDirection:'row'}}>
+                          <TouchableRipple onPress={() => navigation.navigate('Subjects')}>
+                         <Avatar.Icon onPress={ () => { goBack() } } icon='arrow-left' style={{backgroundColor:null}}/>
+                          </TouchableRipple>
+                          <Avatar.Image source={require('../assets/imgs/logo.png')} style={{backgroundColor:'white'}}/>                     
+                        </View>   
+                    ),  
                   })}          />
           <Stack.Screen name='ContentScreen' component={ContentScreen} 
                   options={({navigation})=>({
@@ -201,7 +234,9 @@ class Screens extends Component {
                       headerTitleStyle: {
                         fontWeight: 'bold',
                         fontFamily:'MidasFontBold',
-                        fontSize:headerSize
+                        fontSize:headerSize,
+                        marginLeft: '70px'
+
                       },
                       headerRight: () => (
                         <View>
@@ -212,6 +247,14 @@ class Screens extends Component {
                                     text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                         </View>
                       ),
+                      headerLeft: ({ goBack }) => (
+                        <View style={{flexDirection:'row'}}>
+                          <TouchableRipple onPress={() => navigation.navigate('Chapters')}>
+                         <Avatar.Icon onPress={ () => { goBack() } } icon='arrow-left' style={{backgroundColor:null}}/>
+                          </TouchableRipple>
+                          <Avatar.Image source={require('../assets/imgs/logo.png')} style={{backgroundColor:'white'}}/>                     
+                        </View>   
+                    ),                    
                   })}
           />  
           <Stack.Screen name='LoginScreen' component={LoginScreen} 
@@ -232,7 +275,8 @@ class Screens extends Component {
                   headerTitleStyle: {
                     fontWeight: 'bold',
                     fontFamily:'MidasFontBold',
-                    fontSize:headerSize
+                    fontSize:headerSize,
+                    marginLeft: '70px'
                   },
                   headerRight: () => (
                     <View>
@@ -243,10 +287,18 @@ class Screens extends Component {
                                 text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
                     </View>
                   ),
+                  headerLeft: ({ goBack }) => (
+                    <View style={{flexDirection:'row'}}>
+                      <TouchableRipple onPress={() => navigation.navigate('ContentScreen')}>
+                     <Avatar.Icon onPress={ () => { goBack() } } icon='arrow-left' style={{backgroundColor:null}}/>
+                      </TouchableRipple>
+                      <Avatar.Image source={require('../assets/imgs/logo.png')} style={{backgroundColor:'white'}}/>                     
+                    </View>   
+                ),                
               })}
           />  
 
-          <Stack.Screen name='OfflinePdfReader' component={OfflinePdfReader} 
+          {/* <Stack.Screen name='OfflinePdfReader' component={OfflinePdfReader} 
               options={({navigation})=>({
                 headerShown: true,
                   title: 'Lets Learn',
@@ -271,13 +323,13 @@ class Screens extends Component {
                     </View>
                   ),
               })}
-          />  
+          />   */}
 
-          <Stack.Screen name='OnlineVideoPlayer' component={OnlineVideoPlayer} 
+          {/* <Stack.Screen name='OnlineVideoPlayer' component={OnlineVideoPlayer} 
             options={{
               headerShown: false,
             }}
-          />  
+          />   */}
         </Stack.Navigator>
     )
   }

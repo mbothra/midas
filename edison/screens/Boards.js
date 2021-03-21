@@ -6,6 +6,7 @@ import {BoardCard} from '../components/'
 import {MidasStyles} from '../constants/'
 import ContentProcessor from '../screens/ContentProcessor';
 import {HeaderComponent} from '../components/'
+import {FABGroup} from '../components/'
 
 class Boards extends Component {
 
@@ -19,9 +20,12 @@ class Boards extends Component {
         const boards = ContentProcessor.getAllBoards();
         const cards = boards.map((category, index)=><BoardCard boardText={category} boardSubText={category} key={index} id={index} boardNavigate={() => {this.boardNavigate(category)}}/>)
         return (
+          <View style={MidasStyles.FABContainer}>
         <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}
             </View>
+            <FABGroup></FABGroup>
+          </View>
         )
     }
 }

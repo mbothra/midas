@@ -8,6 +8,7 @@ import { Dimensions } from "react-native";
 import {View, Image, TouchableOpacity } from 'react-native';
 import ContentProcessor from '../screens/ContentProcessor';
 import { SubjectCard } from '../components';
+import {FABGroup} from '../components/'
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -31,9 +32,13 @@ class Subjects extends Component {
         const subjects = ContentProcessor.getAllSubjects(board,classNum);
         const cards = subjects.map((category, index)=><SubjectCard subjectNameText={category} subjectNameSubText={ContentProcessor.getSubjectDescription(board,classNum,category)} key={index} id={index} subjectNavigate={() => {this.subjectNavigate(category)}}/>)
         return (
+            <View style={MidasStyles.FABContainer}>
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}
             </View>
+            <FABGroup></FABGroup>
+            </View>
+
         )
     }
 }

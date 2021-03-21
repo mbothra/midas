@@ -62,7 +62,7 @@ class Home extends Component {
                 <Text style={{fontSize:fontSize, fontFamily:'MidasFontBold'}}>Midas</Text>
             </View>
             <View style={{alignItems:'center'}}>
-                <Text style={{fontSize:fontSize*0.5, fontFamily:'MidasFont'}}>for a seamless learning experience </Text>
+                <Text style={{fontSize:fontSize*0.4, fontFamily:'MidasFont'}}>for a seamless learning experience </Text>
             </View>
             <View style={{flex:0.5}}/>
             <View style={{alignItems:'center'}}>
@@ -111,6 +111,10 @@ class Home extends Component {
             <View style={MidasStyles.avatarContainer}>
                 {avatarView}
             </View>
+            <View style={{alignItems:'right'}}>
+                <Text style={{fontSize:width*0.07*0.25, fontFamily:'MidasFontBold'}}>*An Initiative by Thinksharp Foundation* </Text>
+            </View>
+
         </View>
         )
     }

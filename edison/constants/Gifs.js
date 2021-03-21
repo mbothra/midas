@@ -1,6 +1,6 @@
 // local imgs
-const Spark = require("../assets/gifs/spark.gif");
+// const Spark = require("../assets/gifs/spark.gif");
 
-export default {
-    Spark
-};
+// export default {
+//     Spark
+// };

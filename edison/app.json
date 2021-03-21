@@ -1,10 +1,12 @@
 {
+  "name":"midas",
   "expo": {
     "name": "edison",
     "slug": "edison",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "platforms": ["web"],
     "splash": {
       "image": "./assets/imgs/logo.png",
       "resizeMode": "contain",
@@ -16,9 +18,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "web": {
       "favicon": "./assets/favicon.png"
     }
