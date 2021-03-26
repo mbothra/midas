@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Book2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <record>
+		<ID>1</ID>
+		<Board>CBSE</Board>
+       <Class>Smith</Class>
+	   <ClassCategory>SS</ClassCategory>
+       <Subject>16753</Subject>
+       <Chapter>UK</Chapter>
+       <Description>Qtr 3</Description>
+    </record>
+    <record>
+		<ID>2</ID>
+		<Board>CBSE</Board>
+       <Class>Johnson</Class>
+	   <ClassCategory>SS</ClassCategory>
+       <Subject>14808</Subject>
+       <Chapter>USA</Chapter>
+       <Description>Qtr 4</Description>
+    </record>
+</Book2>

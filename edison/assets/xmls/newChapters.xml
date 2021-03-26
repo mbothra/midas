@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Book2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<ID>1</ID>
+		<Board>MSB</Board>
+		<Class>1</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>2</ID>
+		<Board>MSB</Board>
+		<Class>1</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>3</ID>
+		<Board>MSB</Board>
+		<Class>1</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>4</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Defence</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>5</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>6</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Geography</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>7</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>8</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>9</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Maths</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>10</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Science</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>11</ID>
+		<Board>MSB</Board>
+		<Class>10</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>PersonalityDevelopment</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>12</ID>
+		<Board>MSB</Board>
+		<Class>2</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>13</ID>
+		<Board>MSB</Board>
+		<Class>2</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>14</ID>
+		<Board>MSB</Board>
+		<Class>2</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>15</ID>
+		<Board>MSB</Board>
+		<Class>3</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>16</ID>
+		<Board>MSB</Board>
+		<Class>3</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>17</ID>
+		<Board>MSB</Board>
+		<Class>3</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>18</ID>
+		<Board>MSB</Board>
+		<Class>4</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>19</ID>
+		<Board>MSB</Board>
+		<Class>4</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>20</ID>
+		<Board>MSB</Board>
+		<Class>4</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Maths</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>21</ID>
+		<Board>MSB</Board>
+		<Class>4</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>22</ID>
+		<Board>MSB</Board>
+		<Class>4</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>PracticeExercise</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>23</ID>
+		<Board>MSB</Board>
+		<Class>5</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>24</ID>
+		<Board>MSB</Board>
+		<Class>5</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Maths</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>25</ID>
+		<Board>MSB</Board>
+		<Class>5</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>26</ID>
+		<Board>MSB</Board>
+		<Class>5</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>PracticeExercise</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>27</ID>
+		<Board>MSB</Board>
+		<Class>5</Class>
+		<ClassCategory>Primary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>28</ID>
+		<Board>MSB</Board>
+		<Class>6</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Balbharati</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>29</ID>
+		<Board>MSB</Board>
+		<Class>6</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>30</ID>
+		<Board>MSB</Board>
+		<Class>6</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Science</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>31</ID>
+		<Board>MSB</Board>
+		<Class>6</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Geography</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>32</ID>
+		<Board>MSB</Board>
+		<Class>6</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>33</ID>
+		<Board>MSB</Board>
+		<Class>6</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>History</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>34</ID>
+		<Board>MSB</Board>
+		<Class>6</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Maths</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>35</ID>
+		<Board>MSB</Board>
+		<Class>7</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Balbharati</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>36</ID>
+		<Board>MSB</Board>
+		<Class>7</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>37</ID>
+		<Board>MSB</Board>
+		<Class>7</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Science</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>38</ID>
+		<Board>MSB</Board>
+		<Class>7</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Geography</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>39</ID>
+		<Board>MSB</Board>
+		<Class>7</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>40</ID>
+		<Board>MSB</Board>
+		<Class>7</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>History</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>41</ID>
+		<Board>MSB</Board>
+		<Class>7</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Maths</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>42</ID>
+		<Board>MSB</Board>
+		<Class>8</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>43</ID>
+		<Board>MSB</Board>
+		<Class>8</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Science</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>44</ID>
+		<Board>MSB</Board>
+		<Class>8</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Geography</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>45</ID>
+		<Board>MSB</Board>
+		<Class>8</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>46</ID>
+		<Board>MSB</Board>
+		<Class>8</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>History</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>47</ID>
+		<Board>MSB</Board>
+		<Class>8</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>48</ID>
+		<Board>MSB</Board>
+		<Class>8</Class>
+		<ClassCategory>Secondary</ClassCategory>
+		<Subject>Maths</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>49</ID>
+		<Board>MSB</Board>
+		<Class>9</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>English</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>50</ID>
+		<Board>MSB</Board>
+		<Class>9</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Science</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>51</ID>
+		<Board>MSB</Board>
+		<Class>9</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Geography</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>52</ID>
+		<Board>MSB</Board>
+		<Class>9</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Hindi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>53</ID>
+		<Board>MSB</Board>
+		<Class>9</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>History</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>54</ID>
+		<Board>MSB</Board>
+		<Class>9</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Marathi</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>55</ID>
+		<Board>MSB</Board>
+		<Class>9</Class>
+		<ClassCategory>Senior-Secondary</ClassCategory>
+		<Subject>Maths</Subject>
+		<Chapter>Chapter: 1-SyllabusBook</Chapter>
+		<Description>Prescribed book for the class</Description>
+	</record>
+</Book2>

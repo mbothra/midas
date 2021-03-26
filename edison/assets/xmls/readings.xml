@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Book2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<ID>1</ID>
+		<ReadingTitle>Where do they go</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen102.pdf")</URI>
+		<Provider>2</Provider>
+		<Description>Story about two friends who lost in town</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>2</ID>
+		<ReadingTitle>Too big too small</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen103.pdf")</URI>
+		<Provider>2</Provider>
+		<Description>Story about fresh watermelon from riverside</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>3</ID>
+		<ReadingTitle>Simple counting</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen104.pdf")</URI>
+		<Provider>2</Provider>
+		<Description>Learning of counting from game</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>4</ID>
+		<ReadingTitle>Rainbow visits the village</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen105.pdf")</URI>
+		<Provider>2</Provider>
+		<Description>story about rainbow in village</Description>
+		<References>reference link, if any</References>
+	</record>
+</Book2>

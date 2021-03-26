@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Book2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<ID>1</ID>
+		<ReadingTitle>1stHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class1\1stHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>2</ID>
+		<ReadingTitle>1stMarathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class1\1stMarathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>3</ID>
+		<ReadingTitle>1stMyEnglishBook</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class1\1stMyEnglishBook.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>4</ID>
+		<ReadingTitle>10thDefence</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thDefence.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>5</ID>
+		<ReadingTitle>10thEnglish</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thEnglish.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>6</ID>
+		<ReadingTitle>10thGeography</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thGeography.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>7</ID>
+		<ReadingTitle>10thHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>8</ID>
+		<ReadingTitle>10thMArathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thMArathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>9</ID>
+		<ReadingTitle>10thMaths-1</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thMaths-1.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>10</ID>
+		<ReadingTitle>10thMaths-2</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thMaths-2.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>11</ID>
+		<ReadingTitle>10thScience_Tech-1</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thScience_Tech-1.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>12</ID>
+		<ReadingTitle>10thScience_Tech-2</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thScience_Tech-2.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>13</ID>
+		<ReadingTitle>10thVyaktimatvavikas</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class10\10thVyaktimatvavikas.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>14</ID>
+		<ReadingTitle>2ndHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class2\2ndHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>15</ID>
+		<ReadingTitle>2ndMarathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class2\2ndMarathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>16</ID>
+		<ReadingTitle>2ndMyEnglishBook</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class2\2ndMyEnglishBook.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>17</ID>
+		<ReadingTitle>3rdHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class3\3rdHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>18</ID>
+		<ReadingTitle>3rdMarathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class3\3rdMarathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>19</ID>
+		<ReadingTitle>3rdMyEnglishBook</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class3\3rdMyEnglishBook.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>20</ID>
+		<ReadingTitle>4thHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class4\4thHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>21</ID>
+		<ReadingTitle>4thMarathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class4\4thMarathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>22</ID>
+		<ReadingTitle>4thMaths</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class4\4thMaths.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>23</ID>
+		<ReadingTitle>4thMyEnglishBook</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class4\4thMyEnglishBook.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>24</ID>
+		<ReadingTitle>4thParisarAbhyas1</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class4\4thParisarAbhyas1.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>25</ID>
+		<ReadingTitle>4thParisarAbhyas2</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class4\4thParisarAbhyas2.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>26</ID>
+		<ReadingTitle>5thmarathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class5\5thmarathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>27</ID>
+		<ReadingTitle>5thmaths</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class5\5thmaths.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>28</ID>
+		<ReadingTitle>5thMyenglish</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class5\5thMyenglish.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>29</ID>
+		<ReadingTitle>5thParisarabhyas1</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class5\5thParisarabhyas1.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>30</ID>
+		<ReadingTitle>5thparisarabhyas2</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class5\5thparisarabhyas2.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>31</ID>
+		<ReadingTitle>5thSulabhbarati-hindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class5\5thSulabhbarati-hindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>32</ID>
+		<ReadingTitle>6thBalbharati</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class6\6thBalbharati.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>33</ID>
+		<ReadingTitle>6thEnglish</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class6\6thEnglish.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>34</ID>
+		<ReadingTitle>6thGeneralScience</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class6\6thGeneralScience.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>35</ID>
+		<ReadingTitle>6thGeography</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class6\6thGeography.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>36</ID>
+		<ReadingTitle>6thHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class6\6thHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>37</ID>
+		<ReadingTitle>6thHistory</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class6\6thHistory.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>38</ID>
+		<ReadingTitle>6thmaths</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class6\6thmaths.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>39</ID>
+		<ReadingTitle>7thBalbharati</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class7\7thBalbharati.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>40</ID>
+		<ReadingTitle>7thEnglish</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class7\7thEnglish.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>41</ID>
+		<ReadingTitle>7thGeneralScience</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class7\7thGeneralScience.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>42</ID>
+		<ReadingTitle>7thGeography</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class7\7thGeography.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>43</ID>
+		<ReadingTitle>7thHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class7\7thHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>44</ID>
+		<ReadingTitle>7thHistory</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class7\7thHistory.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>45</ID>
+		<ReadingTitle>7thMaths</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class7\7thMaths.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>46</ID>
+		<ReadingTitle>8thEnglish</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class8\8thEnglish.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>47</ID>
+		<ReadingTitle>8thGeneralScience</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class8\8thGeneralScience.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>48</ID>
+		<ReadingTitle>8thGeography</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class8\8thGeography.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>49</ID>
+		<ReadingTitle>8thHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class8\8thHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>50</ID>
+		<ReadingTitle>8thHistory</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class8\8thHistory.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>51</ID>
+		<ReadingTitle>8thMarathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class8\8thMarathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>52</ID>
+		<ReadingTitle>8thMaths</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class8\8thMaths.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>53</ID>
+		<ReadingTitle>9thEnglish</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thEnglish.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>54</ID>
+		<ReadingTitle>9thGeneralScience</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thGeneralScience.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>55</ID>
+		<ReadingTitle>9thGeography</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thGeography.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>56</ID>
+		<ReadingTitle>9thHindi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thHindi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>57</ID>
+		<ReadingTitle>9thHistory</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thHistory.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>58</ID>
+		<ReadingTitle>9thMarathi</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thMarathi.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>59</ID>
+		<ReadingTitle>9thMaths-1</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thMaths-1.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+	<record>
+		<ID>60</ID>
+		<ReadingTitle>9thMaths-2</ReadingTitle>
+		<IsOnline>0</IsOnline>
+		<URI>D:\midas\edison\assets\readings\class9\9thMaths-2.pdf</URI>
+		<Provider>3</Provider>
+		<Description>Prescribed book for the class</Description>
+	</record>
+</Book2>

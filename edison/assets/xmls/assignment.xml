@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Book2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<ID>1</ID>
+		<Title>Write down the your intake from story</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen102.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>2</ID>
+		<Title>Write down the your intake from story</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen103.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>3</ID>
+		<Title>Write down the your intake from story</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen104.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>4</ID>
+		<Title>Write down the your intake from story</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/readings/ceen105.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Read the complete story and write down your intake and learning from story in 50 words</Description>
+		<References>reference link, if any</References>
+	</record>
+</Book2>

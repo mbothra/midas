@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Book2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<ID>1</ID>
+		<Title>How many colors in rainbow?</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/quizzes/ceen102.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Description of reading</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>2</ID>
+		<Title>When rainbow can seen?</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/quizzes/ceen103.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Description of reading</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>3</ID>
+		<Title>Who was thursty?</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/quizzes/ceen104.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Description of reading</Description>
+		<References>reference link, if any</References>
+	</record>
+	<record>
+		<ID>4</ID>
+		<Title>How many friends went to town?</Title>
+		<IsOnline>0</IsOnline>
+		<URI>require("../assets/quizzes/ceen105.pdf")</URI>
+		<Provider>1</Provider>
+		<Description>Description of reading</Description>
+		<References>reference link, if any</References>
+	</record>
+</Book2>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Book2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <record>
+		<ID>1</ID>
+		<VideoTitle>CBSE</VideoTitle>
+       <IsOnline>0</IsOnline>
+	   <URI>SS/dfsa/fdsa</URI>
+       <Provider>16753</Provider>
+       <References>UK</References>
+       <Description>Qtr 3</Description>
+    </record>
+    <record>
+		<ID>1</ID>
+		<VideoTitle>fsad</VideoTitle>
+       <IsOnline>1</IsOnline>
+	   <URI>SS/fds/asd/ds</URI>
+       <Provider>16753</Provider>
+       <References>UK</References>
+       <Description>Qtr 3</Description>
+    </record>
+</Book2>
