@@ -6,7 +6,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>1</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -15,7 +15,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>1</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -24,79 +24,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>1</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>4</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>Defence</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>5</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>6</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>Geography</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>7</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>8</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>9</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>Maths</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>10</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>Science</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
-<Description>Prescribed book for the class</Description>
-</record>
-<record>
-<ID>11</ID>
-<Board>MSB</Board>
-<Class>10</Class>
-<ClassCategory>Senior-Secondary</ClassCategory>
-<Subject>PersonalityDevelopment</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -105,7 +33,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>2</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -114,7 +42,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>2</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -123,7 +51,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>2</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -132,7 +60,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>3</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -141,7 +69,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>3</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -150,7 +78,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>3</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -159,7 +87,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>4</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -168,7 +96,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>4</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -177,7 +105,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>4</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Maths</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -186,7 +114,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>4</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -195,7 +123,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>4</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>PracticeExercise</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -204,7 +132,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>5</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -213,7 +141,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>5</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Maths</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -222,7 +150,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>5</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -231,7 +159,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>5</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>PracticeExercise</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -240,7 +168,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>5</Class>
 <ClassCategory>Primary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -249,7 +177,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>6</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Balbharati</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -258,7 +186,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>6</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -267,7 +195,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>6</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Science</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -276,7 +204,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>6</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Geography</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -285,7 +213,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>6</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -294,7 +222,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>6</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>History</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -303,7 +231,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>6</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Maths</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -312,7 +240,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>7</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Balbharati</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -321,7 +249,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>7</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -330,7 +258,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>7</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Science</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -339,7 +267,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>7</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Geography</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -348,7 +276,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>7</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -357,7 +285,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>7</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>History</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -366,7 +294,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>7</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Maths</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -375,7 +303,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>8</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -384,7 +312,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>8</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Science</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -393,7 +321,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>8</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Geography</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -402,7 +330,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>8</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -411,7 +339,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>8</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>History</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -420,7 +348,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>8</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -429,7 +357,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>8</Class>
 <ClassCategory>Secondary</ClassCategory>
 <Subject>Maths</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -438,7 +366,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>9</Class>
 <ClassCategory>Senior-Secondary</ClassCategory>
 <Subject>English</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -447,7 +375,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>9</Class>
 <ClassCategory>Senior-Secondary</ClassCategory>
 <Subject>Science</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -456,7 +384,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>9</Class>
 <ClassCategory>Senior-Secondary</ClassCategory>
 <Subject>Geography</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -465,7 +393,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>9</Class>
 <ClassCategory>Senior-Secondary</ClassCategory>
 <Subject>Hindi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -474,7 +402,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>9</Class>
 <ClassCategory>Senior-Secondary</ClassCategory>
 <Subject>History</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -483,7 +411,7 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>9</Class>
 <ClassCategory>Senior-Secondary</ClassCategory>
 <Subject>Marathi</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
 <record>
@@ -492,10 +420,83 @@ const xml_data = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Class>9</Class>
 <ClassCategory>Senior-Secondary</ClassCategory>
 <Subject>Maths</Subject>
-<Chapter>Chapter: 1-SyllabusBook</Chapter>
+<Chapter>Syllabus Book</Chapter>
 <Description>Prescribed book for the class</Description>
 </record>
-	</content>`;
+<record>
+<ID>4</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>Defence</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+<record>
+<ID>5</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>English</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+<record>
+<ID>6</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>Geography</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+<record>
+<ID>7</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>Hindi</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+<record>
+<ID>8</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>Marathi</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+<record>
+<ID>9</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>Maths</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+<record>
+<ID>10</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>Science</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+<record>
+<ID>11</ID>
+<Board>MSB</Board>
+<Class>10</Class>
+<ClassCategory>Senior-Secondary</ClassCategory>
+<Subject>PersonalityDevelopment</Subject>
+<Chapter>Syllabus Book</Chapter>
+<Description>Prescribed book for the class</Description>
+</record>
+</content>`;
+
 
 const videos_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 	<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

@@ -29,7 +29,7 @@ class Chapters extends Component {
         const chapters = ContentProcessor.getAllChapters(board,classNum,subject);
         const cards = chapters.map((category, index)=>
                                     {
-                                        return (<ChapterCard chapterNameText={category} chapterNameSubText={ContentProcessor.getDesciptionForChapter(board,category,classNum,subject)} key={index} id={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
+                                        return (<ChapterCard chapterNameText={category} chapterNameSubText={ContentProcessor.getDesciptionForChapter(board,category,classNum,subject)[0]} key={index} id={index} chapterNavigate={() => {this.chapterNavigate(category)}}/>)
                                     })
         return (
             <View style={MidasStyles.FABContainer}>

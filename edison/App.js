@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import Screens from "./navigation/Screens";
+import Footer from "./navigation/Footer";
 import { Asset } from "expo-asset";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
@@ -92,8 +93,9 @@ export default class App extends Component  {
           <Provider store={ store }>
           <NavigationContainer>
             <PaperProvider theme={MidasTheme}>
-              <View style={{flex: 1}}>
-                    <Screens />
+              <View style={{flex: 1, overflowY: 'auto', height: '0px'}}>
+                <Screens />
+                <Footer />
               </View>
             </PaperProvider>
           </NavigationContainer>
