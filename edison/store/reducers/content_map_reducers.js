@@ -7,7 +7,6 @@ const initialState = {
 const contentMapReducer = (state = initialState, action) => {
   switch (action.type) {
     case CONTENT_MAP_SET:
-        console.log({ action })
         debugger
         return {
         ...state,

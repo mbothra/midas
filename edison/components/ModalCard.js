@@ -1,5 +1,5 @@
 import { View, Dimensions } from 'react-native';
-import { Button, Paragraph, Dialog, Portal, TouchableRipple, Text } from 'react-native-paper';
+import { Paragraph, Dialog, Portal, TouchableRipple, Text } from 'react-native-paper';
 
 import React, { Component } from 'react'
 import {MidasStyles } from "../constants";

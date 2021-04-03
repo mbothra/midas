@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 import { View, Dimensions } from 'react-native'
-import {MidasStyles} from '../../../constants/'
 import {AssignmentCard} from '../../../components/'
-import {PdfLinks} from '../../../constants/'
 import { videoSet } from '../../../store/actions';
 import { connect } from "react-redux";
-
-const { width } = Dimensions.get("screen");
 
 class AssignmentTab extends Component {
 

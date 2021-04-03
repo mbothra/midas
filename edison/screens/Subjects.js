@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native-paper';
-import { Images } from '../constants/';
 import { connect } from "react-redux";
 import { subjectSet } from '../store/actions/index';
 import {MidasStyles} from '../constants/';
-import { Dimensions } from "react-native";
-import {View, Image, TouchableOpacity } from 'react-native';
+import {View } from 'react-native';
 import ContentProcessor from '../screens/ContentProcessor';
 import { SubjectCard } from '../components';
 import {FABGroup} from '../components/'
 
-
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-
 class Subjects extends Component {
     subjectNavigate = (subjectName) => {
-        console.log(subjectName)
-        console.log(this.props)
         this.props.subjectSetFunction(subjectName)
 
         let navigator = this.props.navigation
@@ -36,7 +27,7 @@ class Subjects extends Component {
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}
             </View>
-            <FABGroup></FABGroup>
+            <FABGroup navigator={this.props.navigation} route="Subjects"></FABGroup>
             </View>
 
         )

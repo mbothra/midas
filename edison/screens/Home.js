@@ -18,11 +18,9 @@ class Home extends Component {
       }
     navigationManager = (role) => {
         let navigator = this.props.navigation
-        console.log(this.props)
         this.props.roleSetFunction(role)
         LoginUtils.is_login_still_active(this)
         setTimeout(() => {
-            console.log(this.state.isLogin)
             if(this.state.isLogin){
                 this.props.userIdSetFunction(this.state.userId)
                 LoginUtils.update_login_archive_for_user(this.state.userId, 'success')
@@ -57,16 +55,16 @@ class Home extends Component {
 
         return (        
         <View style={{flex:0.5}}>
-            <View style={{flexDirection:'row'}}>
+            <View style={{flexDirection:'row', alignItems:'center'}}>
                 <Text style={{fontSize:fontSize, fontFamily:'MidasFont'}}>Welcome to </Text>
                 <Text style={{fontSize:fontSize, fontFamily:'MidasFontBold'}}>Midas</Text>
             </View>
             <View style={{alignItems:'center'}}>
-                <Text style={{fontSize:fontSize*0.4, fontFamily:'MidasFont'}}>for a seamless learning experience </Text>
+                <Text style={{fontSize:fontSize*0.3, fontFamily:'MidasFont'}}>for a seamless learning experience </Text>
             </View>
-            <View style={{flex:0.5}}/>
+            <View style={{flex:0.2}}/>
             <View style={{alignItems:'center'}}>
-                <Text style={{fontFamily:'MidasFont', fontSize:fontSize*0.6}}> You are a ? </Text>
+                <Text style={{fontFamily:'MidasFontBold', fontSize:fontSize*0.35}}>An Initiative by Thinksharp Foundation</Text>
             </View>
         </View>)
     }
@@ -111,9 +109,9 @@ class Home extends Component {
             <View style={MidasStyles.avatarContainer}>
                 {avatarView}
             </View>
-            <View style={{alignItems:'right'}}>
+            {/* <View style={{alignItems:'right'}}>
                 <Text style={{fontSize:width*0.07*0.25, fontFamily:'MidasFontBold'}}>*An Initiative by Thinksharp Foundation* </Text>
-            </View>
+            </View> */}
 
         </View>
         )

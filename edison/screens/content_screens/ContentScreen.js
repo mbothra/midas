@@ -10,30 +10,15 @@ import {AssignmentTab} from './tabs';
 import {QuizTab} from './tabs';
 
 
-const SecondRoute = () => (
-  <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
-);
-
 const initialLayout = { width: Dimensions.get('window').width };
 
 class ContentScreen extends Component {
   VideoRoute = () => {
-    const i = 1;
-    const classNum = this.props.className.replace('Class ','');
-    
+    const i = 1;    
     const {board,chapterName,className,subjectName,...otherProps } = this.props
-
-    const quizzes = ContentProcessor.getQuizzesForChapter(this.props.board,
-      this.props.chapterName,this.props.className,this.props.subjectName);
 
     const videos = ContentProcessor.getVideosForChapter(this.props.board,
       this.props.chapterName,this.props.className,this.props.subjectName);
-    const assingments = ContentProcessor.getAssignmentsForChapter(this.props.board,
-      this.props.chapterName,this.props.className,this.props.subjectName);
-    const readings = ContentProcessor.getReadingsForChapter(this.props.board,
-      this.props.chapterName,this.props.className,this.props.subjectName); 
-    const providers = ContentProcessor.getContentProvider(1);
-    const references = ContentProcessor.getReferences('1,2');  
      
     return (
       <View style={{flex:1}}>

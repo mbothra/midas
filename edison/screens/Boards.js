@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { View , Text} from 'react-native'
+import { View } from 'react-native'
 import { connect } from "react-redux";
 import { boardSet } from '../store/actions/index';
 import {BoardCard} from '../components/'
 import {MidasStyles} from '../constants/'
 import ContentProcessor from '../screens/ContentProcessor';
-import {HeaderComponent} from '../components/'
 import {FABGroup} from '../components/'
 
 class Boards extends Component {
@@ -24,7 +23,7 @@ class Boards extends Component {
         <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}
             </View>
-            <FABGroup></FABGroup>
+            <FABGroup navigator={this.props.navigation} route="Boards"></FABGroup>
           </View>
         )
     }

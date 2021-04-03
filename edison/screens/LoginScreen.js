@@ -6,9 +6,7 @@ import { connect } from "react-redux";
 import { Images } from '../constants/';
 import Database from '../utils/db_utils'
 import { userIdSet } from '../store/actions/index';
-import CommonUtils from '../utils/common_utils'
 import LoginUtils from '../utils/login_utils'
-import { SignupCard} from '../components/'
 
 const { width } = Dimensions.get("screen");
 
@@ -46,7 +44,6 @@ class LoginScreen extends Component {
         }
 
         hideLogoutModal = () => {
-            console.log(this.props)
             this.setState({
                 visible:false
             })
@@ -60,7 +57,6 @@ class LoginScreen extends Component {
         // navigation.navigate('Boards')
         Database.read('SELECT * FROM users where user_name=?',[userName], this, 'user_info')
         setTimeout(() => {
-            console.log(this.props.userName)
             if(me.state.user_info['rows'][0]){
                 let securePassword = me.state.user_info['rows'][0]['password']
                 const userId = me.state.user_info['rows'][0]['id']
@@ -103,7 +99,7 @@ class LoginScreen extends Component {
             <View style={MidasStyles.container}>
                     {/* <SignupCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
                                     text='Please Contact Thinksharp team at the following email or Contact, to get your login generated' title='Logout' okText="Email - info@thinksharpfoundation.org" cancelText="MObile - 9892742011"/> */}
-                  <Image source={Images.Logo} style={{width: imgSize, height: imgSize}}/>
+                  <Image source={Images.Logo2} style={{width: '400px', height: '100px'}}/>
                   <View style={{flex:0.1}}/>
                 <Card style={{width:cardWidth}}>
             <Card.Content>

@@ -2,18 +2,14 @@ import React, { Component } from 'react'
 import { View } from 'react-native'
 import { connect } from "react-redux";
 import { chapterSet } from '../store/actions/index';
-import {Categories} from '../constants/'
 import {ChapterCard} from '../components/'
 import {MidasStyles} from '../constants/'
 import ContentProcessor from './ContentProcessor';
-import { ScrollView } from 'react-native-gesture-handler';
 import {FABGroup} from '../components/'
 
 class Chapters extends Component {
 
     chapterNavigate = (chapterName) => {
-        console.log(chapterName)
-        console.log(this.props)
         this.props.chapterSetFunction(chapterName)
 
         let navigator = this.props.navigation
@@ -36,7 +32,7 @@ class Chapters extends Component {
             <View style={{...MidasStyles.container, flex:1}}>
                 {cards}
             </View>
-            <FABGroup></FABGroup>
+            <FABGroup navigator={this.props.navigation} route="Chapters"></FABGroup>
             </View>
         )
     }

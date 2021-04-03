@@ -1,8 +1,6 @@
 import { FAB, Portal, Provider } from 'react-native-paper';
 
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
-import {MidasStyles} from '../constants/'
 import { connect } from "react-redux";
 import Database from '../utils/db_utils'
 
@@ -30,6 +28,7 @@ class FABGroup extends Component {
 
     render() {
         const {open, userInfo} = this.state
+        const {navigator, route} = this.props
         let userData
         if(userInfo!==undefined){
             userData = userInfo['rows'][0]
@@ -40,13 +39,18 @@ class FABGroup extends Component {
       <Portal>
         <FAB.Group
           open={open}
-          icon={open ? 'calendar-today' : 'plus'}
+          icon={open ? 'calendar-today' : 'menu'}
           actions={[
-            { icon: 'plus', onPress: () => console.log('Pressed add') },
+            { icon: 'plus', onPress: () =>{}},
             {
               icon: 'monitor-dashboard',
               label: 'View Dashboard',
-              onPress: () => console.log('Pressed star'),
+              onPress: () => {
+                navigator.navigate('Dashboard',{
+                  previousRoute: route
+                })
+              },
+              small: false,
             },
             {
               icon: 'account',

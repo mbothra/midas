@@ -1,18 +1,40 @@
 import React, { Component } from 'react'
-import { Avatar, Card, TouchableRipple, Title, Paragraph } from 'react-native-paper';
-import { subjectSet } from '../store/actions/index';
+import { Avatar, Card, Title, Paragraph } from 'react-native-paper';
 import { connect } from "react-redux";
-import { View, TouchableOpacity, Text, StyleSheet, LayoutAnimation, Platform, UIManager, Dimensions} from "react-native";
+import { View, Dimensions} from "react-native";
 import {MidasStyles} from '../constants/'
-import Icon from "react-native-vector-icons/MaterialIcons";
+import TrackingUtils from '../utils/tracking_utils'
+import { activeTrackingScreenSet } from '../store/actions/index';
 
 const { width } = Dimensions.get("screen");
 
-export default class PdfCard extends Component {
+class PdfCard extends Component {
+
+    componentDidMount(){
+        const {board, className, subjectName, pdfTitle, userId, trackingInfoSetFunction} = this.props
+        const self = this
+        document.getElementById(pdfTitle).onclick = function() {
+            const screenName =[board, className, subjectName, pdfTitle].join(':')
+            TrackingUtils.track_user_activity_for_screen(screenName, userId, self, 'tracking_info')
+            setTimeout(()=>{
+                if(self.state.tracking_info){
+                    trackingInfoSetFunction(self.state.tracking_info)
+                }
+            },500)
+            return true    
+        }
+    }
+
+    componentWillUnmount(){
+        const {activeTracker} = this.props
+        let trackingId = activeTracker['insertId']
+        TrackingUtils.track_user_activity_for_screen_exit(trackingId, this, "tracking_exit_info")
+
+    }
 
     render() {
         const {pdfTitle, pdfSubtitle, pdfPath} = this.props
-        const LeftContent = props => <Avatar.Icon {...props} icon="file-pdf" />
+        // const LeftContent = props => <Avatar.Icon {...props} icon="file-pdf" />
         let cardWidth, fontSize
         if(width > 800){
             cardWidth = width/6
@@ -38,11 +60,11 @@ export default class PdfCard extends Component {
             }
             paragraph = pdfSubtitle +'...' + spaces + "."
         }        
-        
+
         return (
             <View style={{width:cardWidth}}>
-                <a href={pdfPath} target="_blank"  type="application/pdf" style={{textDecoration:'none'}}>
-                {/* <TouchableRipple onPress={()=>{}} > */}
+                <a href={pdfPath} target="_blank" type="application/pdf" id={pdfTitle} style={{textDecoration:'none'}}>
+                {/* <TouchableRipple onPress={()=>{track_entry()}} > */}
                 {/* <div  style={imgStyle}>
                 </div> */}
                     <Card elevation={4} style={MidasStyles.pdfCardContainer}>
@@ -59,3 +81,24 @@ export default class PdfCard extends Component {
     }
 }
 
+
+const mapStateToProps = state => {
+    return {
+      className: state.classInfo.className,
+      board: state.boardInfo.board,
+      subjectName: state.subjectInfo.subjectName,
+      chapterName: state.chapterInfo.chapterName,
+      contentType: state.contentInfo.contentType,
+      contentIndex: state.contentInfo.contentIndex,
+      activeTracker: state.trackingInfo.activeTracker,
+      userId: state.boardInfo.userId
+    };
+  };
+  
+const mapDispatchToProps = dispatch => {
+    return {
+        trackingInfoSetFunction: (trackingInfo) => dispatch(activeTrackingScreenSet(trackingInfo))
+    };
+  };
+
+export default connect( mapStateToProps, mapDispatchToProps) (PdfCard);

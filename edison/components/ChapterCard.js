@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-import { Avatar, Card, TouchableRipple } from 'react-native-paper';
-import { subjectSet } from '../store/actions/index';
-import { connect } from "react-redux";
-import { View, TouchableOpacity, Text, StyleSheet, LayoutAnimation, Platform, UIManager, Dimensions} from "react-native";
-import {MidasStyles, CardColorList} from '../constants/'
-import Icon from "react-native-vector-icons/MaterialIcons";
+import { Avatar, Card } from 'react-native-paper';
+import { View, TouchableOpacity, StyleSheet, Platform, UIManager, Dimensions} from "react-native";
+import {CardColorList} from '../constants/'
 
 const { width, height } = Dimensions.get("screen");
 
@@ -44,7 +41,7 @@ export default class ChapterCard extends Component {
 
 
     render() {
-        const {chapterNameText, chapterNameSubText, id} = this.props
+        const {chapterNameText, id} = this.props
         let cardWidth, fontSize, iconSize
         const styles = this.getChapterCardStyle(id)
         if(width > 800){

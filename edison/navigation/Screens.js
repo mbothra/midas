@@ -1,6 +1,6 @@
 import React,{Component} from "react";
-import { View, Dimensions, TouchableOpacity } from "react-native";
-import { Avatar, Modal, TouchableRipple } from 'react-native-paper';
+import { View, Dimensions } from "react-native";
+import { Avatar, TouchableRipple } from 'react-native-paper';
 
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -12,6 +12,7 @@ import Subjects from "../screens/Subjects";
 import Chapters from "../screens/Chapters";
 import ContentScreen from "../screens/content_screens/ContentScreen";
 import LoginScreen from "../screens/LoginScreen";
+import Dashboard from "../screens/Dashboard";
 import OfflineVideoPlayer from "../screens/content_screens/players/OfflineVideoPlayer";
 // import OnlineVideoPlayer from "../screens/content_screens/players/OnlineVideoPlayer";
 // import OfflinePdfReader from "../screens/content_screens/players/OfflinePdfReader";
@@ -20,14 +21,11 @@ import {HeaderComponent, ModalCard} from '../components/'
 import { Images } from '../constants/';
 import LoginUtils from '../utils/login_utils'
 import { connect } from "react-redux";
-import { HeaderBackButton } from '@react-navigation/stack';
 
 const { width } = Dimensions.get("screen");
 let headerSize, headerHeight
 
 const Stack = createStackNavigator();
-
-const boardHeaderComponent = (props) => <HeaderComponent title='Boards' subtitle='teacher' imgSource={Images.Logo} {...props}/>
 
 if(width > 800){
   headerSize = width*0.025
@@ -47,14 +45,12 @@ class Screens extends Component {
   }
 
   showLogoutModal = ()=>{
-    console.log(this.props)
     this.setState({
       visible:true
     })
   }
 
   hideLogoutModal = () => {
-    console.log(this.props)
     this.setState({
         visible:false
     })
@@ -69,7 +65,6 @@ class Screens extends Component {
 
   render() {
     const {visible} = this.state
-    let me = this
     return (
         <Stack.Navigator initialRouteName='Home' animationEnabled={true}>
           <Stack.Screen name='Home' component={Home} 
@@ -134,6 +129,7 @@ class Screens extends Component {
                       headerRight: () => (
                         <View>
                         <TouchableRipple onPress={this.showLogoutModal}>
+              
                         <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
                         </TouchableRipple>
                         <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
@@ -297,6 +293,43 @@ class Screens extends Component {
                 ),                
               })}
           />  
+
+        <Stack.Screen name='Dashboard' component={Dashboard} 
+              options={({navigation, route})=>({
+                headerShown: true,
+                  title: 'User Activity Dashboard',
+                  headerStyle: {
+                    backgroundColor: '#fd0d20',
+                    height: headerHeight,
+                    //boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+                  },
+                  headerTintColor: 'white',
+                  headerTitleStyle: { 
+                    fontWeight: 'bold',
+                    fontFamily:'MidasFontBold',
+                    fontSize:headerSize,
+                    marginLeft: '70px'
+                  },
+                  headerRight: () => (
+                    <View>
+                    <TouchableRipple onPress={this.showLogoutModal}>
+                    <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={logoutButtonSize}/>
+                    </TouchableRipple>
+                    <ModalCard visible={visible} hideModal={()=>this.hideLogoutModal()} onConfirm={()=>{this.onLogout(navigation)}} 
+                                text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
+                    </View>
+                  ),
+                  headerLeft: ({ goBack }) => (
+                    <View style={{flexDirection:'row'}}>
+                      <TouchableRipple onPress={() => navigation.goBack()}>
+                     <Avatar.Icon onPress={ () => { goBack() } } icon='arrow-left' style={{backgroundColor:null}}/>
+                      </TouchableRipple>
+                      <Avatar.Image source={require('../assets/imgs/logo.png')} style={{backgroundColor:'white'}}/>                     
+                    </View>   
+                ),                
+              })}
+          />  
+
 
           {/* <Stack.Screen name='OfflinePdfReader' component={OfflinePdfReader} 
               options={({navigation})=>({
