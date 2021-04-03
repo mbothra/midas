@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 import { View, Dimensions } from 'react-native'
-import {MidasStyles} from '../../../constants/'
 import {VideoCard} from '../../../components/'
-import {VideoLinks} from '../../../constants/'
 import { videoSet } from '../../../store/actions';
 import { connect } from "react-redux";
-
-const { width } = Dimensions.get("screen");
 
 class VideoTab extends Component {
 
@@ -41,7 +37,6 @@ class VideoTab extends Component {
 
     render() {
         const videoLinksNew = this.props.videos;
-        console.log(videoLinksNew)
         const videoElements = videoLinksNew.map((info, index)=><VideoCard videoTitle={info.VideoTitle} videoSubtitle={info.Description} key={info.index} videoNavigate={() => {this.videoNavigate(info, info.ID)}}/>)
         return (
             <View style={{flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>

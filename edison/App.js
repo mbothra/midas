@@ -7,7 +7,6 @@ import { Asset } from "expo-asset";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import AnimatedSplash from "react-native-animated-splash-screen";
-import { Dimensions } from "react-native";
 import 'react-native-gesture-handler';
 // Before rendering any navigation stack
 import { enableScreens } from "react-native-screens";
@@ -17,14 +16,14 @@ import configStore from './store/config_store';
 
 enableScreens();
 
-const { width, height } = Dimensions.get("screen");
 const store = configStore();
 
 const assetImages = [
   Images.Logo,
   Images.AdminIcon,
   Images.StudentIcon,
-  Images.TeacherIcon
+  Images.TeacherIcon,
+  Images.Logo2
 ];
 
 export default class App extends Component  {
@@ -88,6 +87,9 @@ export default class App extends Component  {
         backgroundColor={"#FFFFFF"}
         disableBackgroundImage={true}
         translucent	={true}
+        logoHeight={400}
+        logoWidth={400}
+
       >
           <Provider store={ store }>
           <NavigationContainer>

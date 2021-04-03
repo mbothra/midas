@@ -1,5 +1,3 @@
-import * as FileSystem from "expo-file-system";
-
 'use strict';
 
 var database_name = "midas.db";
@@ -23,15 +21,7 @@ const create_table_queries = [
 
 class Database  {
     constructor(){
-        // Expo.FileSystem.getInfoAsync('SQLite/midas.db') 
-        var objs = Object.getOwnPropertyNames(SQLite)
-        for(var i in objs ){
-            console.log(objs[i]);
-          }
-        console.log(SQLite)
-
         conn.transaction(tx => {
-            console.log(tx)
             create_table_queries.map((query) => {
                 tx.executeSql(query) 
             })
@@ -56,8 +46,6 @@ class Database  {
         })
     }
     read(query, paramsList, class_obj, state_name){
-        let resultSet
-        //console.log(Expo.FileSystem.getInfoAsync('SQLite/<dbfilename>'))
         conn.transaction(tx => {
             tx.executeSql(query, paramsList,
               (txObj, obj) => { 
@@ -71,9 +59,6 @@ class Database  {
     }
 
     executeQuery(query, paramsList){
-        let resultSet
-    
-        //console.log(Expo.FileSystem.getInfoAsync('SQLite/<dbfilename>'))
         conn.transaction(tx => {
             tx.executeSql(query, paramsList,
               (txObj, obj) => { 

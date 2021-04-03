@@ -6,26 +6,22 @@ format = "YYYY-MM-DD HH:mm:ss"
 
 LOGOUT_TIME = 30
 
-class LoginUtils  {
+class TrackingUtils  {
     constructor(){
 
     }
-    track_user_activity_for_screen = (screen_name, user_id, class_obj, track_id) => {
+    track_user_activity_for_screen = (screen_name, user_id, class_obj, obj_name) => {
         query = 'INSERT INTO tracking_info (user_id, screen_name, enter_time, status) values (?, ?, ?, ?)'
         sqliteDateFormat = CommonUtils.dateRenderer(new Date())
         params = [user_id, screen_name, sqliteDateFormat, "open"]
-        Database.write(query,params)
+        Database.write(query,params, class_obj, obj_name)
     }
-    track_user_activity_for_screen_exit = (screen_name, user_id) => {
-        query = 'SELECT * FROM tracking_info WHERE user_id = ? AND status = "open" AND screen_name = ?'
+    track_user_activity_for_screen_exit = (tracking_id, class_obj, obj_name) => {
+        query = 'UPDATE tracking_info SET exit_time = ?, status = ? WHERE id = ?'
         sqliteDateFormat = CommonUtils.dateRenderer(new Date())
-        // Database.write(query,params)
-
+        params = [sqliteDateFormat, "closed", tracking_id]
+        Database.write(query,params, class_obj, obj_name)
     }
-    is_login_still_active = (class_obj, state_name='login_info') => {
-        
-    }
-
 }
 
-module.exports = new LoginUtils();
+module.exports = new TrackingUtils();

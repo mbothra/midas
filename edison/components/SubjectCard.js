@@ -3,8 +3,8 @@ import { View } from 'react-native'
 import { Avatar, Card, TouchableRipple } from 'react-native-paper';
 import { subjectSet } from '../store/actions/index';
 import { connect } from "react-redux";
-import { Dimensions, TouchableOpacity, StyleSheet } from "react-native";
-import {MidasStyles, CardColorList} from '../constants/'
+import { Dimensions, StyleSheet } from "react-native";
+import { CardColorList} from '../constants/'
 
 const { width, height} = Dimensions.get("screen");
 
@@ -42,7 +42,6 @@ class SubjectCard extends Component {
     }
 
     render() {
-        console.log("Subject Cards")
         const {subjectNameText, subjectNameSubText, id} = this.props
         const styles = this.getSubjectCardStyle(id)
         let cardWidth, fontSize, iconSize

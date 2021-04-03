@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-import { Avatar, Card, TouchableRipple, Title, Paragraph } from 'react-native-paper';
-import { subjectSet } from '../store/actions/index';
-import { connect } from "react-redux";
-import { View, TouchableOpacity, Text, StyleSheet, LayoutAnimation, Platform, UIManager, Dimensions} from "react-native";
+import { Avatar, Card, Title, Paragraph } from 'react-native-paper';
+import { View, Dimensions} from "react-native";
 import {MidasStyles} from '../constants/'
-import Icon from "react-native-vector-icons/MaterialIcons";
 
 const { width } = Dimensions.get("screen");
 
@@ -12,7 +9,7 @@ export default class QuizCard extends Component {
 
     render() {
         const {quizTitle, quizSubtitle, quizPath} = this.props
-        const LeftContent = props => <Avatar.Icon {...props} icon="file-pdf" />
+        // const LeftContent = props => <Avatar.Icon {...props} icon="file-pdf" />
         let cardWidth, fontSize
         if(width > 800){
             cardWidth = width/6

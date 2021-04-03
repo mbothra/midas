@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 import { View, Dimensions } from 'react-native'
-import {MidasStyles} from '../../../constants/'
 import {PdfCard} from '../../../components/'
-import {PdfLinks} from '../../../constants/'
 import { videoSet } from '../../../store/actions';
 import { connect } from "react-redux";
-
-const { width } = Dimensions.get("screen");
 
 class PdfTab extends Component {
 
@@ -37,7 +33,6 @@ class PdfTab extends Component {
 
     render() {
         const pdfLinksNew = this.props.readings;
-        console.log(pdfLinksNew)
         const pdfElements = pdfLinksNew.map((info, index)=><PdfCard style={{width:'135%'}} pdfPath={info.URI} pdfTitle={info.ReadingTitle} pdfSubtitle={info.Description} key={index} pdfNavigate={() => {this.pdfNavigate(info, index)}}/>)
         return (
             <View  style={{flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>

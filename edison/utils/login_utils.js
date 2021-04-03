@@ -32,7 +32,6 @@ class LoginUtils  {
             if(class_obj.state.login_info){
                 result = class_obj.state.login_info['rows']
                 let status, loginTime, userId, user, role
-                console.log(result)
                 for(let i=0;i<result.length;i++){
                     user = result[i]
                     status = user['login_status']

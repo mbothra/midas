@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { Avatar, Card, TouchableRipple } from 'react-native-paper';
 import { classSet } from '../store/actions/index';
 import { connect } from "react-redux";
-import { Dimensions, TouchableOpacity, TouchableHighlight, StyleSheet } from "react-native";
+import { Dimensions, TouchableOpacity, StyleSheet } from "react-native";
 import {MidasStyles, CardColorList} from '../constants/'
 
 const { width, height } = Dimensions.get("screen");

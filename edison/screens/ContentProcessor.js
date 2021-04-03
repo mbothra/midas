@@ -1,5 +1,4 @@
 import { parse } from 'fast-xml-parser';
-import {MidasStyles} from '../constants/';
 import Content from '../constants/Content';
 
 const contents = parse(Content.xml_data);

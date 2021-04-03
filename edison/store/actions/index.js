@@ -4,3 +4,4 @@ export { subjectSet } from './subject_actions';
 export { chapterSet } from './chapter_actions';
 export { contentSet } from './content_actions';
 export { videoSet } from './content_actions';
+export { activeTrackingScreenSet } from './tracking_actions';

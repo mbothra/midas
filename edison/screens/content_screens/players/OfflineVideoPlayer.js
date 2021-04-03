@@ -1,9 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions, WebView } from 'react-native';
+import { View, Dimensions } from 'react-native';
 import { Video } from 'expo-av';
-import { VideoTab } from '../tabs';
-import {MidasStyles} from '../../../constants/'
-import { Avatar, Button, Card, Title, Paragraph, Divider } from 'react-native-paper';
+import { Avatar, Card, Paragraph, Divider } from 'react-native-paper';
 
 const { width, height } = Dimensions.get("screen");
 
@@ -45,7 +43,6 @@ return (<Card style={{backgroundColor:'black'}}>
 }
 
 const DesktopView= (videoTitle, videoPath, videoDescription, cardWidth, fontSize, LeftContent, index) => {
-  console.log(index)
   videoPath = videoMap[index]
   return (   
     <View style={{ flexDirection:'row', alignItems: 'flex-start'}}>
@@ -85,8 +82,6 @@ export default class OfflineVideoPlayer extends React.Component {
     render() {
       const { width } = Dimensions.get('window');
       const { videoTitle, videoPath, videoDescription, index } = this.props.route.params
-      console.log(this.props)
-      console.log(videoPath)
       const LeftContent = props => <Avatar.Icon {...props} icon="earth" />
       let cardWidth, fontSize, mobileView 
       if(width > 800){
@@ -107,16 +102,3 @@ export default class OfflineVideoPlayer extends React.Component {
       );
     }
   }
-
-  
-const mapStateToProps = state => {
-  return {
-    videoIndex: state.contentInfo.videoIndex
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-      videoSetFunction: (videoIndex) => dispatch(videoSet(videoIndex))
-  };
-};
