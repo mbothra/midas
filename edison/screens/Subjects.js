@@ -6,6 +6,7 @@ import {View } from 'react-native';
 import ContentProcessor from '../screens/ContentProcessor';
 import { SubjectCard } from '../components';
 import {FABGroup} from '../components/'
+import Footer from "../navigation/Footer";
 
 class Subjects extends Component {
     subjectNavigate = (subjectName) => {
@@ -27,7 +28,12 @@ class Subjects extends Component {
             <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {cards}
             </View>
+            <hr/>
             <FABGroup navigator={this.props.navigation} route="Subjects"></FABGroup>
+            <View style={{flex:0.2}}/>
+            <View style={MidasStyles.Footer}>
+                <Footer />
+            </View>
             </View>
 
         )

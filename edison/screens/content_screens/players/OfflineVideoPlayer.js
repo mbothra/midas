@@ -6,10 +6,10 @@ import { Avatar, Card, Paragraph, Divider } from 'react-native-paper';
 const { width, height } = Dimensions.get("screen");
 
 const videoMap = {
-  1:require('D:/midas/edison/assets/videos/YET_ANI_YET_NAHI.mp4'),
-  2:require('D:/midas/edison/assets/videos/Yamuchi_Safar.mp4'),
-  3:require('D:/midas/edison/assets/videos/english_1.mp4'),
-  4:require('D:/midas/edison/assets/videos/english_2.mp4'),
+  1:'D:/midas/edison/assets/videos/YET_ANI_YET_NAHI.mp4',
+  2:'D:/midas/edison/assets/videos/Yamuchi_Safar.mp4',
+  3:'D:/midas/edison/assets/videos/english_1.mp4',
+  4:'D:/midas/edison/assets/videos/english_2.mp4',
 }
 
 const MobileView = (videoTitle, videoPath, videoDescription, cardWidth, fontSize, LeftContent, index) => {    

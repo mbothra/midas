@@ -14,6 +14,7 @@ import { enableScreens } from "react-native-screens";
 import { Images, MidasTheme } from "./constants";
 import { Provider } from 'react-redux'; 
 import configStore from './store/config_store';
+import {MidasStyles} from './constants/';
 
 enableScreens();
 
@@ -95,9 +96,9 @@ export default class App extends Component  {
           <Provider store={ store }>
           <NavigationContainer>
             <PaperProvider theme={MidasTheme}>
-              <View style={{flex: 1, overflowY: 'auto', height: '0px'}}>
+              <View style={{flex: 1}}>
                 <Screens />
-                <Footer />
+
               </View>
             </PaperProvider>
           </NavigationContainer>

@@ -1,7 +1,5 @@
 import React,{Component} from "react";
-import { View, StyleSheet, Text } from "react-native";
-import { Avatar, Modal, TouchableRipple } from 'react-native-paper';
-import {HeaderComponent, ModalCard} from '../components/'
+import { View, StyleSheet } from "react-native";
 
 class Footer extends Component {
     state = {
@@ -18,15 +16,28 @@ class Footer extends Component {
     render() {
         const {visible} = this.state
         return(
-            <View style={styles.footer}>
                 <View>
-                    <TouchableRipple onPress={this.showLogoutModal}>
-                    <Avatar.Icon icon='power' style={{backgroundColor:'#fd0d20'}} size={40}/>
-                    </TouchableRipple>
-                    <ModalCard visible={visible} 
-                                text='Are you sure you want to logout?' title='Logout' okText="Sure!!" cancelText="Cancel"/>
+                    <div class ='d-flex justify-content-end'>
+                        <a href="http://localhost:8888/tnc.pdf" target="_blank" style = {{color:'white', marginRight:'20px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
+                            Terms and Condition
+                        </a>
+                        <div style={{color:'white', marginRight:'20px'}}>|</div>
+                        <a href="https://www.thinksharpfoundation.org/#home" target="_blank" style = {{color:'white', marginRight:'20px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
+                            About Us
+                        </a>
+                        <div style={{color:'white', marginRight:'20px'}}>|</div>
+                        <a href="javascript:void(0)" style = {{color:'white', marginRight:'12px', fontFamily:'MidasFont', fontSize:'20px'}}>
+                            Developed by 
+                        </a>
+                        <a href="https://www.linkedin.com/in/mudit-bothra-676275b9/" target="_blank" style = {{color:'white', marginRight:'10px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
+                            Mudit Bothra
+                        </a>
+                        <div style = {{color:'white', marginRight:'10px', fontFamily:'MidasFont', fontSize:'20px'}}>{'&'}</div>
+                        <a href="https://www.linkedin.com/in/vishnoiamit/" target="_blank" style = {{color:'white', marginRight:'30px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
+                            Amit Vishnoi    
+                        </a>
+                    </div>
                 </View>
-            </View>
         );
     }
 }

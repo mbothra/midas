@@ -6,6 +6,7 @@ import {ChapterCard} from '../components/'
 import {MidasStyles} from '../constants/'
 import ContentProcessor from './ContentProcessor';
 import {FABGroup} from '../components/'
+import Footer from "../navigation/Footer";
 
 class Chapters extends Component {
 
@@ -32,7 +33,12 @@ class Chapters extends Component {
             <View style={{...MidasStyles.container, flex:1}}>
                 {cards}
             </View>
+            <hr/>
             <FABGroup navigator={this.props.navigation} route="Chapters"></FABGroup>
+            <View style={{flex:0.2}}/>
+            <View style={MidasStyles.Footer}>
+                <Footer />
+            </View>
             </View>
         )
     }

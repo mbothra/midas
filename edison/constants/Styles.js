@@ -17,6 +17,15 @@ const MidasStyles = StyleSheet.create({
     FABContainer:{
       flex: 1,
     },
+    Footer:{
+      height: '40px',
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      bottom:0,
+      backgroundImage: 'linear-gradient(to right, black ,black, black)',
+      zIndex: 150,
+    },
     CustomFABButton:{
       // transform:scale(1.25),
       backgroundColor:'#fd0d20'

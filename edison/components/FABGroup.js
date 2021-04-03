@@ -72,7 +72,7 @@ class FABGroup extends Component {
               // do something if the speed dial is open
             }
           }}
-          fabStyle={{backgroundColor:'#fd0d20',marginRight:'32px',marginBottom:'32px',transform:[{scale:1.25}]}}
+          fabStyle={{backgroundColor:'#fd0d20',marginRight:'32px',marginBottom:'72px',transform:[{scale:1.25}]}}
           small={false}
         />
       </Portal>

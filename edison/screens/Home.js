@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { roleSet } from '../store/actions/index';
 import LoginUtils from '../utils/login_utils'
 import { userIdSet } from '../store/actions/index';
+import Footer from "../navigation/Footer";
 
 const { width } = Dimensions.get("screen");
 
@@ -63,6 +64,7 @@ class Home extends Component {
                 <Text style={{fontSize:fontSize*0.3, fontFamily:'MidasFont'}}>for a seamless learning experience </Text>
             </View>
             <View style={{flex:0.2}}/>
+            <hr/>
             <View style={{alignItems:'center'}}>
                 <Text style={{fontFamily:'MidasFontBold', fontSize:fontSize*0.35}}>An Initiative by Thinksharp Foundation</Text>
             </View>
@@ -112,7 +114,10 @@ class Home extends Component {
             {/* <View style={{alignItems:'right'}}>
                 <Text style={{fontSize:width*0.07*0.25, fontFamily:'MidasFontBold'}}>*An Initiative by Thinksharp Foundation* </Text>
             </View> */}
-
+            <View style={MidasStyles.Footer}>
+            {/* <FABGroup navigator={this.props.navigation} route="Classes"></FABGroup> */}
+                <Footer />
+            </View>
         </View>
         )
     }

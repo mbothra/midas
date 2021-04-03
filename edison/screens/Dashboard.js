@@ -39,7 +39,6 @@ export default class Dashboard extends Component {
         const {tableData} = this.state
         const { ExportCSVButton } = CSVExport;
         const { SearchBar } = Search;
-        const { previousRoute } = this.props.route.params
         const columns = [{
             dataField: 'id',
             text: 'id' ,
