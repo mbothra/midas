@@ -69,7 +69,7 @@ class LoginScreen extends Component {
                 } 
             }
             else if(userName == "teacher" && password=="champion") {
-                    Database.write('INSERT INTO users (user_name, password, school_id, address) values (?, ?, ?, ?)',["teacher","champion",1,"pali hill"], this, "user_id")
+                    Database.write('INSERT INTO users (user_name, password, school_id, address, role) values (?, ?, ?, ?)',["teacher","champion",1,"pali hill","teacher"], this, "user_id")
                     // LoginUtils.update_login_archive_for_user( userId, 'success')
                     // navigation.navigate('Boards')
             }

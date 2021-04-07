@@ -14,7 +14,13 @@ const iconList = {
     "History":"map",
     "Civics":"gavel",
     "Geography":"earth",
-    "Marathi":"typewriter"
+    "Marathi":"typewriter",
+    "Hindi":"hinduism",
+    "English":"sort-alphabetical",
+    "PracticeExercise":"lead-pencil",
+    "Balbharati":"lighthouse-on",
+    "Defence":"sword-cross",
+    "PersonalityDevelopment":"human-female-female"
 }
 
 class SubjectCard extends Component {

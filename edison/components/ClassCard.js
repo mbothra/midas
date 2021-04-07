@@ -32,6 +32,8 @@ const classImgs = {
     'class6':require('../assets/vectorIcons/class6.png'),
     'class7':require('../assets/vectorIcons/class7.png'),
     'class8':require('../assets/vectorIcons/class8.png'),
+    'class9':require('../assets/vectorIcons/class9.png'),
+    'class10':require('../assets/vectorIcons/class10.png'),
 
 }
 
@@ -65,17 +67,17 @@ class ClassCard extends Component {
         let cardWidth, fontSize, isBrowser, avatarSize
         const styles = this.getClassCardStyle(id) 
         if(width > 800){
-            cardWidth = width/2
+            cardWidth = width/2.5
             fontSize = width*0.02
             isBrowser = true
-            avatarSize = 120
+            avatarSize = 115
         }
         else {
             cardWidth = width
             fontSize = width*0.06
         }
         const LeftContentMobile = props => <Avatar.Icon {...props} icon={iconList[id]} style={{backgroundColor:CardColorList[id]}}/>
-        const LeftContent = props =>  <Avatar.Image size={avatarSize} source={classImgs["class1"]}/>
+        const LeftContent = props =>  <Avatar.Image size={avatarSize} source={classImgs["class"+classNameText]}/>
         return (
             <View style={{width:cardWidth}}>
                 {!isBrowser?
@@ -87,7 +89,7 @@ class ClassCard extends Component {
             :                    
             <TouchableOpacity onPress={()=>{}} onFocus={this.props.classNavigate} rippleColor='rgba(253, 13, 32, 0.3)'>
                 <Card elevation={8} style={styles.classCardContainer}>
-                    <Card.Title title={'Class '+ classNameText} leftStyle={{marginTop:avatarSize/2.5}} subtitle={classNameSubText} left={LeftContent} titleStyle={{fontFamily:'MidasFontBold', fontSize:fontSize*1.5, marginLeft:avatarSize/1.4}} subtitleStyle={{fontSize:fontSize*0.8, fontFamily:'MidasFont', marginLeft:avatarSize/1.4, marginTop:10}}/>
+                    <Card.Title title={'Class '+ classNameText} leftStyle={{marginTop:avatarSize/2.4}} subtitle={classNameSubText} left={LeftContent} titleStyle={{fontFamily:'MidasFontBold', fontSize:fontSize*1.5, marginLeft:avatarSize/1.4}} subtitleStyle={{fontSize:fontSize*0.8, fontFamily:'MidasFont', marginLeft:avatarSize/1.4, marginTop:10}}/>
                 </Card>    
             </TouchableOpacity> }
              </View>

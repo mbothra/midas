@@ -45,10 +45,10 @@ class PdfCard extends Component {
             fontSize = width*0.06
         }
         const imgStyle = {
-            paddingTop: '10%',
-            paddingBottom: '10%',
-            paddingLeft: '10%',            
-            paddingRight: '10%',
+            paddingTop: '15%',
+            paddingBottom: '15%',
+            paddingLeft: '15%',            
+            paddingRight: '15%',
         }
         let paragraph 
         if(pdfSubtitle.length > 50){
