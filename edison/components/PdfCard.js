@@ -23,6 +23,12 @@ class PdfCard extends Component {
             },500)
             return true    
         }
+        window.addEventListener('beforeunload', this.onUnmount, false);
+    }
+
+    onUnmount = () => {
+        TrackingUtils.track_user_activity_for_screen_close(this, "tracking_close_info")
+        // clear cookies
     }
 
     componentWillUnmount(){

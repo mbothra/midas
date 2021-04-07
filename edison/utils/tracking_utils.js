@@ -22,6 +22,12 @@ class TrackingUtils  {
         params = [sqliteDateFormat, "closed", tracking_id]
         Database.write(query,params, class_obj, obj_name)
     }
+    track_user_activity_for_screen_close = (class_obj, obj_name) => {
+        query = 'UPDATE tracking_info SET exit_time = ?, status = ? WHERE exit_time is NULL'
+        sqliteDateFormat = CommonUtils.dateRendererDashboard(new Date())
+        params = [sqliteDateFormat, "closed"]
+        Database.write(query,params, class_obj, obj_name)
+    }
 }
 
 module.exports = new TrackingUtils();
