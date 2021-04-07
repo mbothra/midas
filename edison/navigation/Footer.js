@@ -18,14 +18,19 @@ class Footer extends Component {
         return(
                 <View>
                     <div class ='d-flex justify-content-end'>
-                        <a href="http://localhost:8888/tnc.pdf" target="_blank" style = {{color:'white', marginRight:'20px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
-                            Terms and Condition
-                        </a>
-                        <div style={{color:'white', marginRight:'20px'}}>|</div>
-                        <a href="https://www.thinksharpfoundation.org/#home" target="_blank" style = {{color:'white', marginRight:'20px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
+                        <a href="http://localhost:8888/thinkSharpAboutUs.pdf" target="_blank" style = {{color:'white', marginRight:'20px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
                             About Us
                         </a>
                         <div style={{color:'white', marginRight:'20px'}}>|</div>
+                        <a href="http://localhost:8888/ThinkSharp_tou.pdf" target="_blank" style = {{color:'white', marginRight:'20px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
+                            Terms of Use
+                        </a>
+                        <div style={{color:'white', marginRight:'20px'}}>|</div>
+                        <a href="http://localhost:8888/ThinksharpPrivacyPolicy.pdf" target="_blank" style = {{color:'white', marginRight:'20px', fontFamily:'MidasFont', fontSize:'20px', textDecoration:'underline'}}>
+                            Privacy Policy
+                        </a>
+                        <div style={{color:'white', marginRight:'20px'}}>|</div>
+
                         <a href="javascript:void(0)" style = {{color:'white', marginRight:'12px', fontFamily:'MidasFont', fontSize:'20px'}}>
                             Developed by 
                         </a>
