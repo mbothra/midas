@@ -87,7 +87,7 @@ class Home extends Component {
 
     avatarViewForRoles = (role, key_index) => {
         let imgSource = this.getImageSourceForRole(role)
-        const imgSize = width*0.21 
+        const imgSize = width*0.1
         return (
             <View style={{flexDirection:'column', alignItems:'center', marginHorizontal:imgSize*0.1,marginVertical:imgSize*0.1}} key={key_index}>     
                  <TouchableOpacity style={MidasStyles.button} onPress={()=>{this.navigationManager(role)}}>

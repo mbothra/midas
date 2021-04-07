@@ -25,7 +25,17 @@ const assetImages = [
   Images.AdminIcon,
   Images.StudentIcon,
   Images.TeacherIcon,
-  Images.Logo2
+  Images.Logo2,
+  Images.Class1,
+  Images.Class2,
+  Images.Class3,
+  Images.Class4,
+  Images.Class5,
+  Images.Class6,
+  Images.Class7,
+  Images.Class8,
+  Images.Class9,
+  Images.Class10
 ];
 
 export default class App extends Component  {

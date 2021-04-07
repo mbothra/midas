@@ -4,7 +4,7 @@ import { Avatar, Card, TouchableRipple } from 'react-native-paper';
 import { classSet } from '../store/actions/index';
 import { connect } from "react-redux";
 import { Dimensions, TouchableOpacity, StyleSheet } from "react-native";
-import {MidasStyles, CardColorList} from '../constants/'
+import {MidasStyles, CardColorList, Images} from '../constants/'
 
 const { width, height } = Dimensions.get("screen");
 
@@ -24,17 +24,16 @@ const iconList = [
 ]
 
 const classImgs = {
-    'class1': require('../assets/vectorIcons/class1.png'),
-    'class2': require('../assets/vectorIcons/class2.png'),
-    'class3':require('../assets/vectorIcons/class3.png'),
-    'class4':require('../assets/vectorIcons/class4.png'),
-    'class5':require('../assets/vectorIcons/class5.png'),
-    'class6':require('../assets/vectorIcons/class6.png'),
-    'class7':require('../assets/vectorIcons/class7.png'),
-    'class8':require('../assets/vectorIcons/class8.png'),
-    'class9':require('../assets/vectorIcons/class9.png'),
-    'class10':require('../assets/vectorIcons/class10.png'),
-
+    'class1': Images.Class1,
+    'class2': Images.Class2,
+    'class3': Images.Class3,
+    'class4': Images.Class4,
+    'class5': Images.Class5,
+    'class6': Images.Class6,
+    'class7': Images.Class7,
+    'class8': Images.Class8,
+    'class9': Images.Class9,
+    'class10':Images.Class10
 }
 
 class ClassCard extends Component {
@@ -42,7 +41,7 @@ class ClassCard extends Component {
     getClassCardStyle = (id) => {
         let cardHeight 
         if(width > 800){
-            cardHeight = height*0.2
+            cardHeight = height*0.16
         }
         else {
             cardHeight = height*0.15
@@ -67,10 +66,10 @@ class ClassCard extends Component {
         let cardWidth, fontSize, isBrowser, avatarSize
         const styles = this.getClassCardStyle(id) 
         if(width > 800){
-            cardWidth = width/2.5
+            cardWidth = width/3.2
             fontSize = width*0.02
             isBrowser = true
-            avatarSize = 115
+            avatarSize = 90
         }
         else {
             cardWidth = width
