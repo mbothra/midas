@@ -18,7 +18,7 @@ class Boards extends Component {
 
     render() {
         const boards = ContentProcessor.getAllBoards();
-        const cards = boards.map((category, index)=><BoardCard boardText={category} boardSubText={category} key={index} id={index} boardNavigate={() => {this.boardNavigate(category)}}/>)
+        const cards = boards.map((category, index)=><BoardCard boardText={category} boardSubText="Maharashtra State Board" key={index} id={index} boardNavigate={() => {this.boardNavigate(category)}}/>)
         return (
           <View style={MidasStyles.FABContainer}>
         <View style={{...MidasStyles.container, flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>

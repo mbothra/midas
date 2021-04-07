@@ -55,7 +55,7 @@ class FABGroup extends Component {
             {
               icon: 'account',
               label: 'My Profile',
-              onPress: () => {alert('Profile Info \nName : '+userData['user_name'] + '\nDesignation : '+userData['role']+ '\nAddress : '+userData['address'])},
+              onPress: () => {alert('Profile Info \nName : '+userData['user_name'] + '\nDesignation : '+userData['role']+ '\nAddress : '+userData['address'] + '\nUser Id : midas_'+userData['id'])},
               small: false,
             },
           ]}

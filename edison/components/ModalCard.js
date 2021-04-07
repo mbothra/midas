@@ -27,7 +27,7 @@ export default class ModalCard extends Component {
                   <Paragraph style={MidasStyles.modalText}>{text}</Paragraph>
                 </Dialog.Content>
                 <Dialog.Actions>
-                <View style={{flexDirection:'row', width:buttonWidth, marginRight:'20px'}}>
+                <View style={{flexDirection:'row', width:buttonWidth, marginRight:'20px', bottom:'20px'}}>
                     <TouchableRipple style={MidasStyles.loginBtn} onPress={onConfirm}>
                         <Text style={MidasStyles.modalButtonText}>{okText}</Text>
                     </TouchableRipple>

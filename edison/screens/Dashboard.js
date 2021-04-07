@@ -4,11 +4,24 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import Database from '../utils/db_utils'
 import ToolkitProvider, { CSVExport, Search } from 'react-bootstrap-table2-toolkit';
 import '../assets/css/bootstrap.css';
+import CommonUtils from '../utils/common_utils'
 
 export default class Dashboard extends Component {
 
     state = {
         tableData:[]
+    }
+
+    dateDiff(d1, d2){
+        const date1 =CommonUtils.stringToDate(d1, "DD-MM-YYYY HH:mm:ss")
+        const date2 =CommonUtils.stringToDate(d2, "DD-MM-YYYY HH:mm:ss")
+        const diffTime = Math.abs(date2 - date1);
+        const diffSecs = Math.ceil(diffTime / 1000);
+        const hrs = Math.floor(diffSecs/3600) + ''
+        const mins =  Math.ceil((diffSecs%3600)/60) + ''
+        const hrsString =  (hrs.length == 2)?hrs:"0"+hrs
+        const minString =  (mins.length == 2)?mins:"0"+mins
+        return hrsString + ":" + minString 
     }
 
     componentDidMount(){
@@ -26,6 +39,8 @@ export default class Dashboard extends Component {
                     data['className'] = screenInfo[1]
                     data['subjectName'] = screenInfo[2]
                     data['pdfTitle'] = screenInfo[3]
+                    data['duration'] = self.dateDiff(data['enter_time'],data['exit_time'])
+                    data['user_id'] = "midas_"+data['user_id']
                 })
                 self.setState({
                     tableData : dashboardData
@@ -41,7 +56,7 @@ export default class Dashboard extends Component {
         const { SearchBar } = Search;
         const columns = [{
             dataField: 'id',
-            text: 'id' ,
+            text: 'Sr no.' ,
             sort: true,
             headerStyle: { backgroundColor: '#fd0d20', color:'white',fontFamily:'MidasFont',fontSize:'20px' }
         },{
@@ -72,13 +87,18 @@ export default class Dashboard extends Component {
             headerStyle: { backgroundColor: '#fd0d20', color:'white',fontFamily:'MidasFont',fontSize:'20px' }
         },{
             dataField:'enter_time',
-            text: 'Start Time',
+            text: 'Enter Time',
             sort: true,
             headerStyle: { backgroundColor: '#fd0d20', color:'white',fontFamily:'MidasFont',fontSize:'20px' }
 
         },{
             dataField:'exit_time',
             text: 'Exit Time',
+            sort: true,
+            headerStyle: { backgroundColor: '#fd0d20', color:'white',fontFamily:'MidasFont',fontSize:'20px' }
+        },{
+            dataField:'duration',
+            text: 'Duration (HH:MM)',
             sort: true,
             headerStyle: { backgroundColor: '#fd0d20', color:'white',fontFamily:'MidasFont',fontSize:'20px' }
         }]
