@@ -63,8 +63,7 @@ class Home extends Component {
             <View style={{alignItems:'center'}}>
                 <Text style={{fontSize:fontSize*0.3, fontFamily:'MidasFont'}}>for a seamless learning experience </Text>
             </View>
-            <View style={{flex:0.2}}/>
-            <hr/>
+            <View style={{flex:0.4}}/>
             <View style={{alignItems:'center'}}>
                 <Text style={{fontFamily:'MidasFontBold', fontSize:fontSize*0.35}}>An Initiative by Thinksharp Foundation</Text>
             </View>

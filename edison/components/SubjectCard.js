@@ -28,7 +28,7 @@ class SubjectCard extends Component {
     getSubjectCardStyle = (id) => {
         let cardHeight 
         if(width > 800){
-            cardHeight = height*0.2
+            cardHeight = height*0.15
         }
         else {
             cardHeight = height*0.15
@@ -52,9 +52,9 @@ class SubjectCard extends Component {
         const styles = this.getSubjectCardStyle(id)
         let cardWidth, fontSize, iconSize
         if(width > 800){
-            cardWidth = width/2
+            cardWidth = width/2.5
             fontSize = width*0.03
-            iconSize=100
+            iconSize=75
         }
         else {
             cardWidth = width/2

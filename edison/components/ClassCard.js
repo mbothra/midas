@@ -41,7 +41,7 @@ class ClassCard extends Component {
     getClassCardStyle = (id) => {
         let cardHeight 
         if(width > 800){
-            cardHeight = height*0.16
+            cardHeight = height*0.13
         }
         else {
             cardHeight = height*0.15
@@ -69,7 +69,7 @@ class ClassCard extends Component {
             cardWidth = width/3.2
             fontSize = width*0.02
             isBrowser = true
-            avatarSize = 90
+            avatarSize = 65
         }
         else {
             cardWidth = width
