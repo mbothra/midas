@@ -73,7 +73,7 @@ export default class App extends Component  {
       let me = this
       setTimeout(() => {
         me.setState({ isReady: true });
-      }, 1000);   
+      }, 3000);   
      }
   };
 
@@ -99,8 +99,8 @@ export default class App extends Component  {
         backgroundColor={"#FFFFFF"}
         disableBackgroundImage={true}
         translucent	={true}
-        logoHeight={400}
-        logoWidth={400}
+        logoHeight={350}
+        logoWidth={350}
 
       >
           <Provider store={ store }>

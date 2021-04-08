@@ -17,10 +17,12 @@ class PdfCard extends Component {
             const screenName =[board, className, subjectName, pdfTitle].join(':')
             TrackingUtils.track_user_activity_for_screen(screenName, userId, self, 'tracking_info')
             setTimeout(()=>{
+                console.log(self)
+                console.log(self.state)
                 if(self.state.tracking_info){
                     trackingInfoSetFunction(self.state.tracking_info)
                 }
-            },500)
+            },2000)
             return true    
         }
         window.addEventListener('beforeunload', this.onUnmount, false);

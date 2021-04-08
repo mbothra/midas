@@ -27,6 +27,13 @@ class TrackingUtils  {
         sqliteDateFormat = CommonUtils.dateRendererDashboard(new Date())
         params = [sqliteDateFormat, "closed"]
         Database.write(query,params, class_obj, obj_name)
+        var millis = 1000
+        var date = new Date();
+        var curDate = null;
+        do { curDate = new Date(); }
+        while(curDate-date < millis);
+           
+        setTimeout(()=>{},500)
     }
 }
 
