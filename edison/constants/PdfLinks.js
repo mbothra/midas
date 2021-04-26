@@ -7,13 +7,13 @@ const PdfInfo = [
     },
     {
         'pdfTitle':'Learn Subtraction',
-        'pdfDescription':'Lets understand Work',
+        'pdfDescription':'Let\'s understand Work',
         'mode':'offline',
         'path':'http://localhost:8888/test.pdf'
     },
     {
         'pdfTitle':'Learn Division',
-        'pdfDescription':'Sy Hi By Amit Vishnoi',
+        'pdfDescription':'Say Hi By Amit Vishnoi',
         'mode':'offline',
         'path':'http://localhost:8888/sample2.pdf'
     }

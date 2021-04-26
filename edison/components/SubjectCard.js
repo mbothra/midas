@@ -11,16 +11,16 @@ const { width, height} = Dimensions.get("screen");
 const iconList = {
     "Maths":"sack-percent",
     "Science":"flask",
-    "History":"map",
+    "History \& Civics":"map",
     "Civics":"gavel",
     "Geography":"earth",
     "Marathi":"typewriter",
     "Hindi":"hinduism",
     "English":"sort-alphabetical",
-    "PracticeExercise":"lead-pencil",
+    "Environmental Studies":"lead-pencil",
     "Balbharati":"lighthouse-on",
-    "Defence":"sword-cross",
-    "PersonalityDevelopment":"human-female-female"
+    "Defence Studies":"sword-cross",
+    "Self Development \& Art Appreciation":"human-female-female"
 }
 
 class SubjectCard extends Component {
@@ -53,7 +53,7 @@ class SubjectCard extends Component {
         let cardWidth, fontSize, iconSize
         if(width > 800){
             cardWidth = width/2.5
-            fontSize = width*0.03
+            fontSize = width*0.02
             iconSize=75
         }
         else {
@@ -66,7 +66,7 @@ class SubjectCard extends Component {
             <View style={{width:cardWidth}}>
                 <TouchableRipple onPress={()=>{}} onFocus={this.props.subjectNavigate} rippleColor='rgba(253, 13, 32, 0.3)'>
                     <Card elevation={8} style={styles.subjectCardContainer}>
-                        <Card.Title title={subjectNameText} subtitle={subjectNameSubText} right={RightContent} titleStyle={{fontFamily:'MidasFontBold', fontSize:fontSize}} subtitleStyle={{fontFamily:'MidasFont'}}/>
+                        <Card.Title title={subjectNameText} subtitle={''} right={RightContent} titleStyle={{fontFamily:'MidasFontBold', fontSize:fontSize}} subtitleStyle={{fontFamily:'MidasFont'}}/>
                     </Card>    
                 </TouchableRipple>       
              </View>

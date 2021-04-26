@@ -47,7 +47,7 @@ export default class Dashboard extends Component {
                 })
             }
 
-        },1000)
+        },3000)
     }
 
     render() {

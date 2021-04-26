@@ -185,7 +185,7 @@ class Screens extends Component {
           <Stack.Screen name='Chapters' component={Chapters} 
                   options={({navigation})=>({
                     headerShown: true,
-                      title: 'Lets go!',
+                      title: 'Let\'s go!',
                       headerStyle: {
                         backgroundColor: '#fd0d20',
                         height: headerHeight,
@@ -220,7 +220,7 @@ class Screens extends Component {
           <Stack.Screen name='ContentScreen' component={ContentScreen} 
                   options={({navigation})=>({
                     headerShown: true,
-                      title: 'Lets Learn',
+                      title: 'Let\'s Learn',
                       headerStyle: {
                         backgroundColor: '#fd0d20',
                         height: headerHeight,
@@ -261,7 +261,7 @@ class Screens extends Component {
           <Stack.Screen name='OfflineVideoPlayer' component={OfflineVideoPlayer} 
               options={({navigation})=>({
                 headerShown: true,
-                  title: 'Lets Learn',
+                  title: 'Let\'s Learn',
                   headerStyle: {
                     backgroundColor: '#fd0d20',
                     height: headerHeight,
@@ -334,7 +334,7 @@ class Screens extends Component {
           {/* <Stack.Screen name='OfflinePdfReader' component={OfflinePdfReader} 
               options={({navigation})=>({
                 headerShown: true,
-                  title: 'Lets Learn',
+                  title: 'Let\'s Learn',
                   headerStyle: {
                     backgroundColor: '#fd0d20',
                     height: headerHeight,

@@ -105,7 +105,7 @@ class LoginScreen extends Component {
                 <Card style={{width:cardWidth}}>
             <Card.Content>
         <Title style={{textAlign:'center', fontFamily:'MidasFontBold', fontSize:fontSize}}>Hello {role}</Title>
-        <Paragraph style={{textAlign:'center', fontFamily:'MidasFont', fontSize:fontSize*0.6}}>Lets get you started</Paragraph>
+        <Paragraph style={{textAlign:'center', fontFamily:'MidasFont', fontSize:fontSize*0.6}}>Let's get you started</Paragraph>
 
             <TextInput
                 label="UserName"

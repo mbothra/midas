@@ -3,9 +3,9 @@ import CommonUtils from './common_utils'
 import moment from 'moment'
 import QueryExecutor from './db_query_executor'
 
-format = "YYYY-MM-DD HH:mm:ss"
+const format = "YYYY-MM-DD HH:mm:ss"
 
-LOGOUT_TIME = 30
+const LOGOUT_TIME = 30
 
 class LoginUtils  {
     constructor(){
@@ -13,8 +13,10 @@ class LoginUtils  {
     }
     update_login_archive_for_user = (userId, status) => {
         query = 'REPLACE INTO login_info (user_id, login_time, login_status) values (?, ?, ?)'
+        console.log(query)
         sqliteDateFormat = CommonUtils.dateRenderer(new Date())
         params = [userId, sqliteDateFormat, status]
+        console.log(params)
         Database.write(query,params)
         //QueryExecutor.insert_chapters()
 
@@ -66,7 +68,7 @@ class LoginUtils  {
                 }
             }
 
-        }, 100);  
+        }, 1000);  
     }
 
 }

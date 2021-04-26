@@ -40,7 +40,7 @@ class Home extends Component {
                     alert("Screen not available for the role")
                 }
             }
-        }, 100); 
+        }, 1000); 
 
     }
 

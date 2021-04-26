@@ -51,7 +51,11 @@ class ContentProcessor{
         let mySet = new Set();
         let jsonArray = contents
         let records = contents.content.record;
-        let filteredRecords = records.filter(d => (d.Board === board && d.Class == (parseInt(classNum.replace('Class ',''))) && d.Subject === subject && d.Chapter === chapter));
+        let classNum1 = classNum.replace('Class ','')
+        if(Number.isInteger(classNum1)){
+            classNum1 = parseInt(classNum1)
+        }
+        let filteredRecords = records.filter(d => (d.Board === board && d.Class == classNum1 && d.Subject === subject && d.Chapter === chapter));
         
         return filteredRecords[0];
     }

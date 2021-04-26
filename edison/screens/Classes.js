@@ -11,7 +11,12 @@ import Footer from "../navigation/Footer";
 class Classes extends Component {
 
     classNavigate = (className) => {
-        this.props.classSetFunction("Class "+className)
+        if(Number.isInteger(className)){
+            this.props.classSetFunction("Class "+className)
+        }else{
+            this.props.classSetFunction(className)
+        }
+
 
         let navigator = this.props.navigation
         navigator.navigate('Subjects')

@@ -14,6 +14,7 @@ const Class7= require('../assets/vectorIcons/class7.png');
 const Class8= require('../assets/vectorIcons/class8.png');
 const Class9= require('../assets/vectorIcons/class9.png');
 const Class10= require('../assets/vectorIcons/class10.png');
+const CommonResources= require('../assets/vectorIcons/commonResources.png');
 
 export default {
   Logo,
@@ -31,4 +32,5 @@ export default {
   Class8,
   Class9,
   Class10,
+  CommonResources,
 };
