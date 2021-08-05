@@ -547,37 +547,17 @@ const videos_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 	<content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 		<record>
 			<ID>1</ID>
-			<VideoTitle>Yet Ani Yet Nahi</VideoTitle>
-			<IsOnline>0</IsOnline>
-			<URI>D:/midas/edison/assets/videos/YET_ANI_YET_NAHI.mp4</URI>
-			<Provider>1</Provider>
-			<References>1,2</References>
-			<Description>The Video covers story of two village girls</Description>
+			<VideoTitle>प्रस्तावना 0 ची ओळख व लेखन</VideoTitle>
+			<IsOnline>1</IsOnline>
+			<URI>https://youtu.be/q9Q6eRCURew</URI>
+			<Description>fdsa</Description>
 		</record>
 		<record>
 			<ID>2</ID>
-			<VideoTitle>Yamuchi Safar</VideoTitle>
-			<IsOnline>0</IsOnline>
-			<URI>require("../assets/videos/Yamuchi_Safar.mp4")</URI>
-			<Provider>1</Provider>
-			<References>1,2</References>
-			<Description>The video cexplains about jungal safari</Description>
-		</record>
-		<record>
-			<ID>3</ID>
-			<VideoTitle>Welcome Song</VideoTitle>
+			<VideoTitle>प्रस्तावना १ ची ओळख व लेखन</VideoTitle>
 			<IsOnline>1</IsOnline>
-			<URI>https://www.digitalsakshar.com/TopicSelection?competencyid=CMP780</URI>
-			<Provider>2</Provider>
-			<Description>Our first lesson is also a ‘Welcome Song’. So let’s start singing this wonderful poem. Sing a welcome song Ring a joyful bell. Ding dong ding everybody sing For a new day begins. Come together one and all Ding dong ding dong ding dong ding. Happy song of joy we bring Ding dong ding dong ding dong ding. Everyday is a new day and we should always be hopeful that every new day will bring happiness to us</Description>
-		</record>
-		<record>
-			<ID>4</ID>
-			<VideoTitle>ENGLISH WORDS WE KNOW</VideoTitle>
-			<IsOnline>1</IsOnline>
-			<URI>https://www.digitalsakshar.com/TopicSelection?competencyid=CMP782</URI>
-			<Provider>2</Provider>
-			<Description>Do you know what we are going to learn today? Today we will learn the names of a few things we usually see in our day to day life. I will show you some pictures and you have to tell me what object it is.</Description>
+			<URI>https://youtu.be/tmHYNWpjixM</URI>
+			<Description>fdsa</Description>
 		</record>
 	</content>`;
 
@@ -1258,7 +1238,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ID>63</ID>
 <ReadingTitle>1st Math- Marathi.pdf</ReadingTitle>
 <IsOnline>0</IsOnline>
-<URI>http://localhost:8888/1st Math- Marathi.pdf.pdf</URI>
+<URI>http://localhost:8888/1st Math- Marathi.pdf</URI>
 <Provider>3</Provider>
 <Description>Prescribed book for the class</Description>
 </record>
@@ -1266,7 +1246,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ID>64</ID>
 <ReadingTitle>1st Maths- English.pdf</ReadingTitle>
 <IsOnline>0</IsOnline>
-<URI>http://localhost:8888/1st Maths- English.pdf.pdf</URI>
+<URI>http://localhost:8888/1st Maths- English.pdf</URI>
 <Provider>3</Provider>
 <Description>Prescribed book for the class</Description>
 </record>
@@ -1274,7 +1254,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ID>65</ID>
 <ReadingTitle>2nd Maths- English.pdf</ReadingTitle>
 <IsOnline>0</IsOnline>
-<URI>http://localhost:8888/2nd Maths- English.pdf.pdf</URI>
+<URI>http://localhost:8888/2nd Maths- English.pdf</URI>
 <Provider>3</Provider>
 <Description>Prescribed book for the class</Description>
 </record>
@@ -1282,7 +1262,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ID>66</ID>
 <ReadingTitle>2nd Math_ Marathi.pdf</ReadingTitle>
 <IsOnline>0</IsOnline>
-<URI>http://localhost:8888/2nd Math_ Marathi.pdf.pdf</URI>
+<URI>http://localhost:8888/2nd Math_ Marathi.pdf</URI>
 <Provider>3</Provider>
 <Description>Prescribed book for the class</Description>
 </record>
@@ -1290,7 +1270,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ID>67</ID>
 <ReadingTitle>3rd Maths- English.pdf</ReadingTitle>
 <IsOnline>0</IsOnline>
-<URI>http://localhost:8888/3rd Maths- English.pdf.pdf</URI>
+<URI>http://localhost:8888/3rd Maths- English.pdf</URI>
 <Provider>3</Provider>
 <Description>Prescribed book for the class</Description>
 </record>
@@ -1298,7 +1278,7 @@ const readings_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ID>68</ID>
 <ReadingTitle>3rd Maths- Marathi.pdf</ReadingTitle>
 <IsOnline>0</IsOnline>
-<URI>http://localhost:8888/3rd Maths- Marathi.pdf.pdf</URI>
+<URI>http://localhost:8888/3rd Maths- Marathi.pdf</URI>
 <Provider>3</Provider>
 <Description>Prescribed book for the class</Description>
 </record>
@@ -1354,11 +1334,13 @@ const syllabus_xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<ID>1</ID>
 		<ChapterID>1</ChapterID>
 		<Readings>1</Readings>
+		<Videos>1</Videos>
 	</record>
 	<record>
 		<ID>2</ID>
 		<ChapterID>2</ChapterID>
 		<Readings>2</Readings>
+		<Videos>2</Videos>
 	</record>
 	<record>
 		<ID>3</ID>
