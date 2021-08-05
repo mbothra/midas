@@ -42,7 +42,7 @@ class VideoCard extends Component {
 
 
     render() {
-        const {videoTitle, videoSubtitle} = this.props
+        const {videoTitle, videoSubtitle, videoPath} = this.props
         // const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
         let cardWidth, fontSize, imgStyle
         if(width > 800){
