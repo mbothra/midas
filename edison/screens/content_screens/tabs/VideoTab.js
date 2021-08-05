@@ -37,7 +37,7 @@ class VideoTab extends Component {
 
     render() {
         const videoLinksNew = this.props.videos;
-        const videoElements = videoLinksNew.map((info, index)=><VideoCard videoTitle={info.VideoTitle} videoSubtitle={info.Description} key={info.index} videoNavigate={() => {this.videoNavigate(info, info.ID)}}/>)
+        const videoElements = videoLinksNew.map((info, index)=><VideoCard videoPath={info.URI} videoTitle={info.VideoTitle} videoSubtitle={info.Description} key={info.index} videoNavigate={() => {this.videoNavigate(info, info.ID)}}/>)
         return (
             <View style={{flexDirection:'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
                 {videoElements}
