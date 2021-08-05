@@ -46,7 +46,7 @@ export default class VideoCard extends Component {
 
         return (
             <View style={{width:cardWidth}}>
-                <TouchableRipple onPress={()=>{}} onFocus={this.props.videoNavigate} >
+                <a href={videoPath} target="_blank" type="application/pdf" id={videoTitle} style={{textDecoration:'none'}}>
                     <Card elevation={4} style={MidasStyles.pdfCardContainer}>
                         <Card.Cover source={{uri:require('../assets/vectorIcons/screen-player.png')}} style={imgStyle}/>
                         <Card.Content>
@@ -54,7 +54,7 @@ export default class VideoCard extends Component {
                         <Paragraph style={{fontFamily:'MidasFont', fontSize:fontSize*0.8}}>{paragraph}</Paragraph>
                         </Card.Content>                    
                     </Card>    
-                </TouchableRipple>     
+                    </a>  
             </View>
         )
     }
